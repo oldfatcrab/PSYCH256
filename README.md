@@ -103,7 +103,7 @@ Q: What activities require intelligence?
 
 #### <a id="1A2b"></a>Mental Representations and Procedures
 
-![abc](/imgs/1a2b_abc.jpg)
+![abc](imgs/1a2b_abc.png)
 - Mental representation - statements:
   - Block A is on block B.
   - Block B is on the ground.
