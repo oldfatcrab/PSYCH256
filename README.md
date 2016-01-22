@@ -79,6 +79,7 @@ Cue:
 
 ### <a id="1A2"></a>The Cognitive Paradigm
 
+- **Paradigm**: a framework for constructing theories
 - Cognitive Scientists disagree on the nature of thinking and intelligence
 - **Central Thesis**: Thinking is like computation (in a digital computer)
   - Information is represented (data structures)
@@ -102,7 +103,7 @@ Q: What activities require intelligence?
 
 #### <a id="1A2b"></a>Mental Representations and Procedures
 
-![abc](imgs/1a2b_abc.jpg)
+![abc](/imgs/1a2b_abc.jpg)
 - Mental representation - statements:
   - Block A is on block B.
   - Block B is on the ground.
