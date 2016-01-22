@@ -96,27 +96,29 @@ Cue:
 #### <a id="1A2a"></a>Intelligence
 
 Q: What activities require intelligence?
-- Typical answers include recreational challenges, argumentation, technological work
-- In classic CogSci: intelligence is any activity in which **expertise** plays a major role
+- Typical answers include `recreational challenges`, `argumentation`, `technological work`
+- In classic CogSci: intelligence is any activity in which `knowledge` and `expertise` plays a major role
 - Intelligence is **knowledge**-intensive
 
 #### <a id="1A2b"></a>Mental Representations and Procedures
 
+![abc](imgs/1a2b_abc.jpg)
 - Mental representation - statements:
   - Block A is on block B.
   - Block B is on the ground.
   - Block C is on the ground.
   - Block C is right of block B.
 - Mental procedures - rules:
-- To have block x on block y, place block x on top of block y.
-- To place block x on top of block y, remove other blocks from on top of y, pick up block x, move it on block y and let go of block x.
+  - To have block x on block y, place block x on top of block y.
+  - To place block x on top of block y, remove other blocks from on top of y, pick up block x, move it on block y and let go of block x.
 - Make a plan to spell "CAB"
 
 #### <a id="1A2c"></a>Theory Assessment in Cognitive Science
 
-- Theory: model or explanation of how an intelligent activity occurs
+- Theory: `model` or `explanation` of how an intelligent activity occurs
   - Claim about mental representations and procedures, e.g., statements and rules
-- Model confirmed if performance matches human behaviour, disconfirmed otherwise
+- Model **confirmed** if performance matches human behaviour (disconfirmed otherwise)
+  - This approach is referred as **cognitive modeling** - the operation of the computer program models or imitates the course of human thinking
 - CogSci is highly interdisciplinary
   - Different disciplines employ different testing methods, e.g., brain scans in neuroscience
 
@@ -162,7 +164,14 @@ Q: What activities require intelligence?
 
 ### <a id="1B1"></a>Course Materials
 
+- Textbook
+- Reading Materials
+
 ### <a id="1B2"></a>Evaluation
+
+- Refer to "Grade Breakdown"
+- Discussion in forum is strongly recommended, but not weighted in grade
 
 ### <a id="1B3"></a>Plagiarism
 
+...
