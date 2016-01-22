@@ -36,6 +36,16 @@ Cue:
     - [Evaluation](#1B2)
     - [Plagiarism](#1B3)
 - <a id="module2"></a>[Lecture 2. Computing Machinery and Intelligence (Turing)](#2)
+- [Computing Machinery and Intelligence (Turing)](#2A)
+    - [Introduction](#2A1)
+    - [Alan Turing](#2A2)
+    - [Computing Machinery and Intelligence](#2A3)
+    - [Critique of the New Problem](#2A4)
+    - [Digital Computer](#2A5)
+    - [Universality of Digital Computers](#2A6)
+    - [Contrary Views on the Main Question](#2A7)
+    - [Issues Raised by the Turing Test](#2A8)
+- [Review Questions and References](#2B)
 - <a id="module3"></a>[Lecture 3. Logic](#3)
 - <a id="module4"></a>[Lecture 4. Rules](#4)
 - <a id="module5"></a>[Lecture 5. Concepts](#5)
@@ -176,3 +186,116 @@ Q: What activities require intelligence?
 ### <a id="1B3"></a>Plagiarism
 
 ...
+
+---------
+
+# <a id="2A"></a>Computing Machinery and Intelligence (Turing)
+
+## <a id="2A1"></a>Introduction CRUM
+
+- CRUM
+  - Central thesis: thinking is like computing
+  - Expertise and knowledge central to intelligence
+- _Computing machinery and intelligence_ (Turing 1950)
+  - Can machines think? (1953)
+  - Drew attention to the topic
+  - Laid out the classic paradigm
+
+## <a id="2A2"></a>Alan Turing
+
+- Cambridge (1936), Princeton (1938)
+- Developed general theory of computation
+- Instrumental in breaking the Enigma code (WWII)
+- Noted that computers can do intelligent work
+- Committed suicide in 1954
+
+## <a id="2A3"></a>Computing Machinery and Intelligence
+
+- The **imitation game**: Why not just use a dictionary definition?
+- Subject to prejudice:
+  - "The question of whether a computer can think is no more interesting than the question of whether a submarine can swim." (Dijkstra)
+- Had history been different, our definitions would be different
+- Imitation Game
+  1. Imitate someone of the opposite gender:
+    - (a) man, (b) woman, (c) interrogator
+    - Goal: for (c) to distinguish (a) and (b)
+    - Teletype interface prevents superficial information from being used by (c)
+  2. A computer might imitate a human:
+    - (a) computer, (b) person, (c) interrogator
+    - Goal: for (c) to distinguish (a) and (b)
+    - Teletype interface ensures that only some profound difference, e.g., intelligence, matters
+
+## <a id="2A4"></a>Critique of the New Problem
+
+- To suppose that a (human) brain is required for intelligence is to **beg the question**
+- Why is conversing a good test of intelligence?
+  - It provides the computer an opportunity to avoid prejudice, superficial judgement
+  - We often judge a person’s intelligence through conversation
+  - We would still need to avoid jumping to conclusions though
+
+## <a id="2A5"></a>Digital Computer
+
+- Among machines, the digital computer holds most interest
+- Components of a typical digital computer:
+  1. Memory (RAM)
+  2. Executive unit (CPU)
+  3. Control (program)
+- A program is a series of numbers interpreted as instructions by the executive
+  - "If position 4505 contains 0 obey next the instruction stored in 6707, otherwise continue straight on"
+- Carrying out instructions determines the computer’s behaviour
+
+## <a id="2A6"></a>Universality of Digital Computers
+
+- Two kinds of digital computers:
+  1. Special purpose (e.g., a chess computer)
+  2. General purpose (e.g., a PC)
+- A general purpose computer can imitate the activity of any other computer
+- If a general purpose computer succeeds at the imitation game, it would be due to its program, not its physical hardware
+- Intelligence is highly abstract in nature
+
+## <a id="2A7"></a>Contrary Views on the Main Question
+- Original prediction: success in 50 years
+  - Later, 100 years
+- Current activity: Loebner prize
+  - Success is not yet in sight
+- Is success out of the question?
+- Objections include:  Theological, mathematical, consciousness, originality, etc.
+  - Theological objection:
+    - Argument: thinking requires a soul, computers have no souls, so computers cannot think
+    - Reply: it only follows that computers do not think
+      - Being omnipotent, God could give souls to computers, enabling them to think
+    - Ultimately, whether computers can think is an empirical matter, determined by empirical tests (e.g., the imitation game)
+      - Biblical arguments about empirical matters is unreliable
+  - Mathematical objection:
+    - Some questions are answerable by humans and not by digital computers:
+      - Gödel’s theorem shows that there are questions of logic not answerable, in principle, by a given computer
+      - The person framing the question can determine the answer
+    - Reply: there may be such questions for any given human
+      - Perhaps a computer could scan your brain and frame a question unanswerable by you, in principle
+      - The computer could computer the answer though
+    - The Gödel argument **begs the question**
+  - Consciousness objection:
+    - We can know that something thinks only if we know that it has conscious experiences
+      - It is like something to be intelligent
+    - Reply: We know of our own conscious experiences only
+      - Solipsism: only I am known to be conscious
+    - To avoid absurdity, we must admit behavioural evidence for intelligence
+      - E.g., the imitation game
+  - Originality objection:
+    - Lady Lovelace noted that Babbage’s Analytical engine had no pretense to originality
+      - Perhaps it lacked enough capacity
+    - A digital computer simply obeys its instructions and so does nothing original, unlike intelligent humans
+    - Reply:
+      1. The objection begs the question: Perhaps the same is true of humans
+      2. “Machines take me by surprise with great frequency”. But they are predictable in principle? See point 1.
+
+## <a id="2A8"></a>Issues Raised by the Turing Test
+
+- Turing deemphasizes physical constitution and emphasizes possession of knowledge
+  - Is hardware truly beside the point?
+  - Perhaps intelligence requires a brain
+- The imitation game is indifferent to experience and learning
+  - Could a “brain in a vat” be intelligent?
+  - Perhaps intelligence requires a body
+
+# <a id="2B"></a>Review Questions and References
