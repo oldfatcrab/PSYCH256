@@ -36,7 +36,7 @@ Cue:
     - [Evaluation](#1B2)
     - [Plagiarism](#1B3)
 - <a id="module2"></a>[Lecture 2. Computing Machinery and Intelligence (Turing)](#2)
-- [Computing Machinery and Intelligence (Turing)](#2A)
+  - [Computing Machinery and Intelligence (Turing)](#2A)
     - [Introduction](#2A1)
     - [Alan Turing](#2A2)
     - [Computing Machinery and Intelligence](#2A3)
@@ -203,6 +203,7 @@ Q: What activities require intelligence?
 
 ## <a id="2A2"></a>Alan Turing
 
+![abc](imgs/2a2_1954_turing_small.jpg)
 - Cambridge (1936), Princeton (1938)
 - Developed general theory of computation
 - Instrumental in breaking the Enigma code (WWII)
@@ -212,7 +213,7 @@ Q: What activities require intelligence?
 ## <a id="2A3"></a>Computing Machinery and Intelligence
 
 - The **imitation game**: Why not just use a dictionary definition?
-- Subject to prejudice:
+- Subject to **prejudice**:
   - "The question of whether a computer can think is no more interesting than the question of whether a submarine can swim." (Dijkstra)
 - Had history been different, our definitions would be different
 - Imitation Game
@@ -234,7 +235,7 @@ Q: What activities require intelligence?
   - We would still need to avoid jumping to conclusions though
 
 ## <a id="2A5"></a>Digital Computer
-
+
 - Among machines, the digital computer holds most interest
 - Components of a typical digital computer:
   1. Memory (RAM)
@@ -245,7 +246,7 @@ Q: What activities require intelligence?
 - Carrying out instructions determines the computer’s behaviour
 
 ## <a id="2A6"></a>Universality of Digital Computers
-
+
 - Two kinds of digital computers:
   1. Special purpose (e.g., a chess computer)
   2. General purpose (e.g., a PC)
@@ -254,6 +255,7 @@ Q: What activities require intelligence?
 - Intelligence is highly abstract in nature
 
 ## <a id="2A7"></a>Contrary Views on the Main Question
+
 - Original prediction: success in 50 years
   - Later, 100 years
 - Current activity: Loebner prize
