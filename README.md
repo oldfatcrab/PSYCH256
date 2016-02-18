@@ -1,4 +1,5 @@
 Course Structure:
+
     1. [Introduction](#module1)
     2. [Computing Machinery and Intelligence (Turing)](#module2)
     3. [Logic](#module3)
