@@ -442,7 +442,7 @@ Q: What activities require intelligence?
 - Aristotle (385-322 BC) found that form affects argument assessment 
     - **formal** logic 
 - Homer's argument: 
-<table class="tg">
+<table border="0">
     <tr>
         <td>[There is a gear Patron]</td>
     </tr>
@@ -450,7 +450,7 @@ Q: What activities require intelligence?
         <td>Not a bear in sight</td>
     </tr>
     <tr>
-        <td> ---------- </td>
+        <td><hr></td>
     </tr>
     <tr>
         <td>Therefore, the Boar Patrol keeps bears away</td>
