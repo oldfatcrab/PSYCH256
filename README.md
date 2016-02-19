@@ -421,68 +421,439 @@ Q: What activities require intelligence?
 
 ### <a id="#3A1"></a>Overview
 
-- **Logic**: study of arguments
-    - 
+- **Logic**: the study of arguments 
+    - Assess their strength 
+    - Represent their content and form 
+- Example: Does the Bear Patrol work? 
+    - Homer: Not a bear in sight. The Bear Patrol must be working like a charm. 
+    - Lisa: That's specious reasoning, Dad. 
+    - Homer: Thank you, dear. 
+    - Lisa: By your logic I could claim that this rock keeps tigers away. 
+- What problems are there with Homer's argument? 
+- The strength of the argument rests on its form and the reasons given 
+- Introduction to modern symbolic logic
+    - Propositional logic 
+    - Predicate logic 
+    - Probability 
+- Is formal logic a model for mental representations and procedures? 
 
 ### <a id="#3A2"></a>Arguments
 
+- Aristotle (385-322 BC) found that form affects argument assessment 
+    - **formal** logic 
+- Homer's argument: 
+    |[There is a gear Patron]|
+    |Not a bear in sight|
+    |---|
+    |Therefore, the Boar Patrol keeps bears away|
+Premises, underline, conclusion 
+Argument validity 
+Syl ogism: 2 premises 
+All geese are birds. 
+All birds have Wings. 
+All geese have Wings. 
+This argument is valid. If the premises are true, 
+then the conclusion is true also 
+All lions are Catg. 
+All Catg hava fur. 
+All lions have 
+All lions are 
+All waffles are biræ. 
+All lions are biræ. 
+Validity (cont.) 
+Not all argument forms are valid: 
+There is a Bear Patrol 
+Not a bear in sight 
+The Bear patrol keeps bears away 
+Likewise: 
+There is an anti-tiger rock. 
+Not a tiqer in siqht, 
+The anti-tiger rock keeps tigers away. 
+Any argument Of this form is non-valid 
 
 ### <a id="#3A3"></a>Propositional Logic
 
+Propositional logic 
+Problem: not a I valid arguments are syllogisms 
+Boole (1815—1864): Treat logic like algebra 
+If Scu:rates is a man, then he is mortal. 
+ig a man. 
+Socrates is mortal. 
+Becomes 
+(S -Socrates a man-I 
+The first premise is a pair of sentences (S, M) 
+connected by 
 
 #### <a id="#3A3a"></a>Propositional Symbolization
 
+Propositional symbolization 
+Simple sentences are s'ngle letters, e.g., 
+"Jill likes movies" (Ml, and 
+"Jill likes starry skies" (S) 
+Complex sentences are single letters combined 
+by connectives, e.g., 
+1. Conjunction: "Jill likes movies and starry skies" 
+1M & Sl 
+Disjunction: -Jill ikes movies or starry skies" (M v S). 
+Implication: "If Jill likes movies, then Jill likes starry 
+skies" (M Sl 
+Negation: "Jill does not like movies" I-MI. 
+Propositional (cont.) 
+The rent is due and I have no money. 
+London and Paris are national capitals. 
+Tme is not on my side. 
+The campers were tired, but they were happy 
+I will go hiking if I finish my work first. 
+If nominated I will not run, and if elected I will not 
+serve. 
+Exercise 
+Symbolize the following using the 
+symbols given 
+, A conjunction has two components while a 
+negation has only one. CC, NI 
+2 If we attempt this pay then we'l either win 
+big or lose big. IA, W, L) 
+1 will leave town unless you call me. (L, Cl 
+Skip class again and you won't pass the 
+course. (S, P) 
 
 #### <a id="#3A3b"></a>Propositional Arguments
 
+Propositional arguments 
+Symbolization exposes form and validity: 
+If the gear Patrol w ONS , be arg are in Sight. W g 
+patrol 
+NO bears in Sight. 
+An argument Of this form is called modus 
+ponens and is always valid: 
+Propositional arguments 
+(cont.) 
+Not every form Of argument is valid, e.g., 
+If the Bear Pat wo 'KS, then no bears are in Sight. W g 
+No are in 
+The Bear Patrol works. 
+This form is a fallacy: affirming the 
+consequent. It is always non-valid: 
 
 ### <a id="#3A4"></a>Predicate Logic
 
+Predicate logic 
+Many arguments valid in English are not 
+valid in propositional logic, e.g., 
+A geese are birds. 
+All birds have winqs. 
+A geese have Wings. 
+Propositional logic does not symbo ize 
+content shared among statements 
+Pred cate logic addresses this deficiency 
 
 #### <a id="#3A4a"></a>Predicate Symbolization
 
+Predicate symbolization 
+Sentences are broken down into predicates and 
+terms, e.g., 
+"Bill has a great smile." 
+"Jill is witty and intelligent." 
+"Tina is taller than Jill." 
+Becomes 
+Jill) 
+(Sx: x has a great smile; b Billl 
+IWx: x is witty: Ix: x is intelligent; j 
+ITxy: x is taller than y; t — Tlnal 
+Quantifiers 
+wj&lj 
+Quantifiers symbolize English quantity adverbs: 
+The universal quantifier The sentence applies to 
+every individual 
+The existential quantifier The sentence applies to 
+at least some individua . 
+For example: 
+"Some peog.e just do not listen." 
+"All is well that ends well. 
+likes a smartass." 
+8 Lxy)) 
+Exercise 
+Symbolize the following using the 
+symbols given 
+Some people can't be bought (P, B). 
+A penny saved is a penny earned (P, S, E) 
+Every dog has day (D D', H). 
 
 #### <a id="#3A4b"></a>Predicate Arguments
 
+Predicate arguments 
+A valid predicate argument: 
+A geese are birds. 
+A birds have wings. 
+A geese have wings. 
+(Vx)(Gx Bx) 
+Another valid argument (different form): 
+All men are mortal. 
+Socrates is a man. 
+Socrates is mortal. 
 
 ### <a id="#3A5"></a>Probabilistic Logic
 
+Probabilistic logic 
+We need to assess non-valid arguments 
+too 
+E.g., weather forecasts 
+Apply domain-specific knowledge 
+Probabilities can represent such 
+knowledge 
+• E.g., the probability of rain is 40% 
+Extend propositional logic for this purpose 
 
 #### <a id="#3A5a"></a>Probabilistic Symbolization
 
+Probability symbolization 
+Probability of proposition p: pr(p) — 
+10... Il 
+pr(p) O if p is certainly false and 
+2 pr(p) 1 if pis certainly true. 
+Examples: 
+p — "It Will snow in January.- pr(p) .99 
+p: "It Will snow in April." pr(p) .65 
+p — "It will snow in August." pr(p) .02 
+Probability rules 
+Rules for probabi ities of complex sentences: 
+1 . 1 — pr(p) 
+2. pr(p v q) if p q mutually exclusive 
+3. • pr(q), if p and 
+Examples: 
+snow in January.) I — in I - 
+.gg- .01 
+or 2 on adie roll") — prtl on roll") prr2 on a 
+die roll") - 1/6 1,'3 
+in January and in January ) 
+in .99. .65: 6435 
+is an artsve given that she's female.) ?? 
 
 #### <a id="#3A5b"></a>Probabilistic Arguments
 
+Probability arguments 
+An argument is convinc'ng if 
+. pr(clr) preen 
+r — reason, c — conclusion 
+Example: 
+Verv often. it has snowed in January. 
+Probably, it WI I snow next January. 
+Calcu ations: 
+pr(NlJ) - pr(N & - (.9. - g 
+pr(-NlJJ - pr(-N & — • 
+The argument is a strong one, probabilistically 
+Probability arguments (cont.) 
+A weak argument? 
+Not a bear in sight. 
+The Bear Patrol works. 
+Calculations: 
+w 
+• pr(Wl-B) pr(W & (.5 • .99)/.99 .5 
+• pr(-Wl-B) prew & (.5 • .99)/.99 .5 
+The argument is weak 
+• Assuming pr(W) pr6W) 
 
 ## <a id="#3B"></a>Evaluation of Logic
 
+Evaluation of logic 
 
 ### <a id="#3B1"></a>Overview
 
+Overview 
+Formal logic provides for the symbolization 
+and evaluat'on of arguments 
+Does logic capture laws Of thought? 
+• Aristotle and Boole agreed, Frege d'd not 
+Why did the pioneers of CogSci look to 
+formal logic? 
+• Powerful and rigourous 
+• Amenable to computational mode ing 
+• Logical thinking 's a hallmark of intelligence 
 
 ### <a id="#3B2"></a>Representational Power
 
+Representational power 
+Propositional logic captures some val'd 
+arguments, e.g., (modus ponens) 
+If it rains, then the Sidewalk gets Wet. 
+s rain. 
+The is Wet. 
+Predicate logic captures more valid arguments, 
+e.g., 
+All men are 
+is a man. 
+is a mortal, 
+Sentences 
+To symbolize arguments, formal logic 
+focuses on statements 
+There are other kinds of sentences, e.g., 
+• Questions: "How do I get to the Bookstore 
+from here?" 
+• Orders: "Set your phasers to k'll!" 
+• Requests: "Would you pass the 
+salt, please?" 
+Texts 
+Not all texts are arguments, e.g., 
+"I'm sorry but this reading initiative. 'm sorry, Ive 
+never been a fan of books. I don't trust them. They're 
+all fact, no heart. I mean, they're elitist, tel ing us what 
+is Or isn't true, or what did or didn't happen. Who's 
+Britannica to tell me the Panama Cana was built in 
+1914? f I want to say it was buit in I g41, that's my 
+right as an American! I'm with the prescient, let 
+history decide what did or did not happen." 
+Representational limitations 
+Predicate logic is specialized where 
+natural languages are generalized 
+Doesn't the generalized nature Of 
+language reflect the generalized nature of 
+thinking, and so mental representations? 
+Formal logic has been extended to 
+address other k nds of sentences 
+The extensions are complex and unwieldy in 
+combination 
 
 ### <a id="#3B3"></a>Computational Power
 
+Computational power 
+Argument construction is a model of 
+intelligent thinking 
+E.g., when Homer said 
+a bear in sight. The Bear patrol must like 
+a charm," 
+was he thinking. 
+is a Bear patrol 
+Not a bear in Sight 
+The Bear Patrol keeps bears away 
+Perhaps thinking is applying rules to symbols, 
 
 #### <a id="#3B3a"></a>Planning
 
+Planning 
+Planning: represent goals and steps to ach eve 
+them 
+E.g., Go from Guelph to LJW: 
+3. reach(l University-Ave) 
+4. reach(l.Llniversity-Ave) trave (l, University-AVC) 
+5. trave reacMI,UW) 
+Note the change 'n notation favoured by 
+Cognitive Scientists 
+A route could be deduced from these rules 
+Planning (cont.) 
+pro: if a route exists, deduction will determine it 
+Cons: Many valid inferences are not helpful: 
+If I travel Hwy-7 and Hwy-85, I could deduce. 
+• travel(l,Hwy-7) & 
+. travel( ,Hwy-7) & & 
+The relevance of an inference s unconnected 
+with its validity 
+Planning (cont.2) 
+Deduction is monotonic 
+Planning must often be norrmonotonic 
+E.g., a route s blocked 
+monotonic 
+non-monotonic 
 
 #### <a id="#3B3b"></a>Decision
 
+Decision 
+Decision: choosing among plans 
+Deduction only determines if plans exist 
+• Preferences need to be added, e.g., 
+travel(l,Hwy-7) —9 & prefer- 
+Assumptions of this approach: 
+I can completely order my preferences, and 
+2. I can know all my preferences before I make 
+my plans. 
+Decision (cont.) 
+Perhaps probabil'ties could address these 
+assumptions 
+• E.g., decide among English, German, Philosophy 
+courses 
+is is English") 
+This solut'on is computationally explosive 
+• pr(AlB) must be known for every A and B 
+. For n predicates, there 2M conditional 
+probabilities 
 
 #### <a id="#3B3c"></a>Explanation
 
+Explanation 
+Why doesn't my favorite Website load? 
+Your browser has a bug; 
+Your connection s not working properly; 
+Your server at your service provider is not 
+working; 
+The Website server is not working; 
+The URL is incorrect. 
+Explanation2 
+Some deductions are explanations (Hempel) 
+—respond(Website) —9 incorrect(URL) 
+yespprV(Website) 
+incorrect(URL) 
+Problems: 
+Multiple explanations? 
+Some deductions are not explanations, e.g., the 
+height of a flagpole 
+How do you explain the height of a flagpole? 
+Explanation3 
+Some explanations are abductions (Peirce) 
+down(Website-server) —9 —readable(Website) 
+-readableIW ebsite) 
+down (Website-sewer) 
+Problems: 
+. Such inductions are risky 
+. Use conditional probability to determine the best 
+explanation, e.g., prCM/ebsite server is 
+Website is not readable.) 0.4 
 
 #### <a id="#3B3d"></a>Learning
 
+Learning 
+Abduction is a form Of learning 
+Inductive generalization also, e.g., 
+Philosophy(PhiI-128) 8 interesting(PhiI- 128) 
+Philosophy(Phil-256j & interesting(Phil-256) 
+interesting(x)) 
+Problem: risk jump ng to conc usions 
+DO you reason in this way? When? 
 
 #### <a id="#3B3e"></a>Psychological Plausibility
 
+Psychological plausibility 
+Subjects agree that modus ponens is 
+deductive, but not affirming the 
+consequent: 
+If the Bear Patrol works, then no bears are in sight 
+No bears are 'n sight 
+Therefore, the Bear Patro works 
+Do people think deductively? 
+Plausibility2 
+Wason card task: 
+given four cards from a deck with numbers on 
+one sue & letters on the other: (Al (Bl (2) (31. 
+Flip which cards to test the rule: If a card has 
+an A on one side, then it has an even number 
+on the Other side 
+Most subjects select IA) and 12); many 
+omit 13) 
+Plausibility3 
+Explanations: 
+• People are not logical, do not apply modus tollens: 
+. People employ schemata 
+• People employ mental models: represent (Al and 
+even-number; assume only represented items are 
+Plausibility4 
+People do not seem to think in accord with the 
+axioms of probability, e.g., 
+. pr(a) pr(b) pr(b) 
+Suppose Frank likes to read French literature, 
+attend foreign films, and discuss world politics 
+People often judge that 
+pr("college-educated") pr("carpenter") pr("carpenter") 
+Instead of probability, people employ stereotypes 
 
 #### <a id="#3B3f"></a>Summary
-
 
 ----------
 
