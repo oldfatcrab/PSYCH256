@@ -442,10 +442,15 @@ Q: What activities require intelligence?
 - Aristotle (385-322 BC) found that form affects argument assessment 
     - **formal** logic 
 - Homer's argument: 
-&nbsp;&nbsp;&nbsp;&nbsp;[There is a gear Patron]
-&nbsp;&nbsp;&nbsp;&nbsp;Not a bear in sight
-&nbsp;&nbsp;&nbsp;&nbsp;---
-&nbsp;&nbsp;&nbsp;&nbsp;Therefore, the Boar Patrol keeps bears away
+
+&nbsp;&nbsp;&nbsp;&nbsp; [There is a gear Patron]
+
+&nbsp;&nbsp;&nbsp;&nbsp; Not a bear in sight
+
+&nbsp;&nbsp;&nbsp;&nbsp; ------------------------------------------- 
+
+&nbsp;&nbsp;&nbsp;&nbsp; Therefore, the Boar Patrol keeps bears away
+
 Premises, underline, conclusion 
 Argument validity 
 Syl ogism: 2 premises 
