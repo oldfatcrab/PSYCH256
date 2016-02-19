@@ -439,430 +439,396 @@ Q: What activities require intelligence?
 
 ### <a id="#3A2"></a>Arguments
 
-- Aristotle (385-322 BC) found that form affects argument assessment 
-    - **formal** logic 
-- Homer's argument: 
-
-&nbsp;&nbsp;&nbsp;&nbsp; [There is a gear Patron]
-
-&nbsp;&nbsp;&nbsp;&nbsp; Not a bear in sight
-
-&nbsp;&nbsp;&nbsp;&nbsp; ------------------------------------------- 
-
-&nbsp;&nbsp;&nbsp;&nbsp; Therefore, the Boar Patrol keeps bears away
-
-Premises, underline, conclusion 
-Argument validity 
-Syl ogism: 2 premises 
-All geese are birds. 
-All birds have Wings. 
-All geese have Wings. 
-This argument is valid. If the premises are true, 
-then the conclusion is true also 
-All lions are Catg. 
-All Catg hava fur. 
-All lions have 
-All lions are 
-All waffles are biræ. 
-All lions are biræ. 
-Validity (cont.) 
-Not all argument forms are valid: 
-There is a Bear Patrol 
-Not a bear in sight 
-The Bear patrol keeps bears away 
-Likewise: 
-There is an anti-tiger rock. 
-Not a tiqer in siqht, 
-The anti-tiger rock keeps tigers away. 
-Any argument Of this form is non-valid 
+- Argument Form
+    - Aristotle (385-322 BC) found that form affects argument assessment 
+        - **formal** logic 
+    - Homer's argument: 
+        - [There is a gear Patron]
+        - Not a bear in sight
+        - -->
+        - Therefore, the Boar Patrol keeps bears away
+    - Premises, underline, conclusion 
+- Argument validity 
+    - Syllogism: 2 premises 
+        - All geese are birds. 
+        - All birds have Wings. 
+        - -->
+        - All geese have Wings. 
+    - This argument is **valid**. If the premises are true, then the conclusion is true also 
+        - All lions are cats. 
+        - All cats have fur. 
+        - -->
+        - All lions have fur.
+    - and:
+        - All lions are waffles
+        - All waffles are birds. 
+        - -->
+        - All lions are birds. 
+    - Not all argument forms are valid: 
+        - There is a Bear Patrol 
+        - Not a bear in sight 
+        - -->
+        - The Bear patrol keeps bears away 
+    - Likewise: 
+        - There is an anti-tiger rock. 
+        - Not a tiger in sight, 
+        - -->
+        - The anti-tiger rock keeps tigers away. 
+    - Any argument of this form is non-valid 
 
 ### <a id="#3A3"></a>Propositional Logic
 
-Propositional logic 
-Problem: not a I valid arguments are syllogisms 
-Boole (1815—1864): Treat logic like algebra 
-If Scu:rates is a man, then he is mortal. 
-ig a man. 
-Socrates is mortal. 
-Becomes 
-(S -Socrates a man-I 
-The first premise is a pair of sentences (S, M) 
-connected by 
+- Problem: not a I valid arguments are syllogisms 
+- Boole (1815-1864): Treat logic like algebra 
+    - If Socrates is a man, then he is mortal. 
+    - Socrates is a man. 
+    - -->
+    - Socrates is mortal. 
+- Becomes 
+    - S &sup; M [S = "Socrates is a man"]
+    - S [M = "Socrates is mortal"]
+    - -->
+    - M
+- The first premise is a pair of sentences (S, M) connected by "&sup;"
 
 #### <a id="#3A3a"></a>Propositional Symbolization
 
-Propositional symbolization 
-Simple sentences are s'ngle letters, e.g., 
-"Jill likes movies" (Ml, and 
-"Jill likes starry skies" (S) 
-Complex sentences are single letters combined 
-by connectives, e.g., 
-1. Conjunction: "Jill likes movies and starry skies" 
-1M & Sl 
-Disjunction: -Jill ikes movies or starry skies" (M v S). 
-Implication: "If Jill likes movies, then Jill likes starry 
-skies" (M Sl 
-Negation: "Jill does not like movies" I-MI. 
-Propositional (cont.) 
-The rent is due and I have no money. 
-London and Paris are national capitals. 
-Tme is not on my side. 
-The campers were tired, but they were happy 
-I will go hiking if I finish my work first. 
-If nominated I will not run, and if elected I will not 
-serve. 
-Exercise 
-Symbolize the following using the 
-symbols given 
-, A conjunction has two components while a 
-negation has only one. CC, NI 
-2 If we attempt this pay then we'l either win 
-big or lose big. IA, W, L) 
-1 will leave town unless you call me. (L, Cl 
-Skip class again and you won't pass the 
-course. (S, P) 
+- Simple sentences are single letters, e.g., 
+    1. "Jill likes movies" [M], and 
+    2. "Jill likes starry skies" [S] 
+- Complex sentences are single letters combined by connectives, e.g., 
+    1. **Conjunction**: "Jill likes movies and starry skies" [M &amp; S] 
+    2. **Disjunction**: -Jill ikes movies or starry skies" [M &or; S]. 
+    3. **Implication**: "If Jill likes movies, then Jill likes starry skies" [M &sup; S]
+    4. **Negation**: "Jill does not like movies" [~M]
+- More examples:
+    - The rent is due and I have no money. [R &amp; ~M]
+    - London and Paris are national capitals. [L &amp; P]
+    - Tme is not on my side. [~T]
+    - The campers were tired, but they were happy. [T &amp; H]
+    - I will go hiking if I finish my work first. [F &sup; H]
+    - If nominated I will not run, and if elected I will not serve. [(N &sup; ~R) &amp; (E &sup; ~S)]
+- Exercise: symbolize the following using the symbols given 
+    1. A conjunction has two components while a negation has only one. [C, N] 
+    2. If we attempt this pay then we'l either win big or lose big. [A, W, L] 
+    3. I will leave town unless you call me. [L, C] 
+    4. Skip class again and you won't pass the course. [S, P]
 
 #### <a id="#3A3b"></a>Propositional Arguments
 
-Propositional arguments 
-Symbolization exposes form and validity: 
-If the gear Patrol w ONS , be arg are in Sight. W g 
-patrol 
-NO bears in Sight. 
-An argument Of this form is called modus 
-ponens and is always valid: 
-Propositional arguments 
-(cont.) 
-Not every form Of argument is valid, e.g., 
-If the Bear Pat wo 'KS, then no bears are in Sight. W g 
-No are in 
-The Bear Patrol works. 
-This form is a fallacy: affirming the 
-consequent. It is always non-valid: 
+- Symbolization exposes form and validity: 
+    - If the gear Patrol works, then no bears are in Sight.
+    - The Bear Patrol works.
+    - --> 
+    - No bears in Sight. 
+- To the symbol, it will be:
+    - W &sup; ~B
+    - W
+    - -->
+    - ~B
+- An argument Of this form is called **modus ponens** and is always valid: 
+    - p &sup; q
+    - p
+    - -->
+    - q
+- Not every form of argument is valid, e.g., 
+    - If the gear Patrol works, then no bears are in Sight.
+    - No bears in Sight. 
+    - --> 
+    - The Bear Patrol works.
+- To the symbol, it will be:
+    - W &sup; ~B
+    - ~B
+    - -->
+    - W
+- This form is a **fallacy**: _affirming the consequent_. It is always non-valid: 
+    - p &sup; q
+    - q
+    - -->
+    - p
 
 ### <a id="#3A4"></a>Predicate Logic
 
-Predicate logic 
-Many arguments valid in English are not 
-valid in propositional logic, e.g., 
-A geese are birds. 
-All birds have winqs. 
-A geese have Wings. 
-Propositional logic does not symbo ize 
-content shared among statements 
-Pred cate logic addresses this deficiency 
+- Many arguments valid in English are not valid in propositional logic, e.g., 
+    - A geese are birds. 
+    - All birds have winqs. 
+    - -->
+    - A geese have Wings. 
+- or, symbolicly:
+    - B
+    - W
+    - -->
+    - G
+- Propositional logic does not symbolize content shared among statements 
+- Pred cate logic addresses this deficiency 
 
 #### <a id="#3A4a"></a>Predicate Symbolization
 
-Predicate symbolization 
-Sentences are broken down into predicates and 
+- Sentences are broken down into predicates and 
 terms, e.g., 
-"Bill has a great smile." 
-"Jill is witty and intelligent." 
-"Tina is taller than Jill." 
-Becomes 
-Jill) 
-(Sx: x has a great smile; b Billl 
-IWx: x is witty: Ix: x is intelligent; j 
-ITxy: x is taller than y; t — Tlnal 
-Quantifiers 
-wj&lj 
-Quantifiers symbolize English quantity adverbs: 
-The universal quantifier The sentence applies to 
-every individual 
-The existential quantifier The sentence applies to 
-at least some individua . 
-For example: 
-"Some peog.e just do not listen." 
-"All is well that ends well. 
-likes a smartass." 
-8 Lxy)) 
-Exercise 
-Symbolize the following using the 
-symbols given 
-Some people can't be bought (P, B). 
-A penny saved is a penny earned (P, S, E) 
-Every dog has day (D D', H). 
+    1. "Bill has a great smile." 
+    2. "Jill is witty and intelligent." 
+    3. "Tina is taller than Jill." 
+- Becomes 
+    1. S<sub>b</sub> [S<sub>x</sub>: x has a great smile; b = Bill]
+    2. W<sub>j</sub> &amp; I<sub>j</sub>  [W<sub>x</sub>: x is witty; I<sub>x</sub>: x is intelligent; j = Jill]
+    3. S<sub>tj</sub> [T<sub>xy</sub>: x is taller than y; t = Tina]
+- Quantifiers 
+    - Quantifiers symbolize English quantity adverbs: 
+        1. The universal quantifier (&forall;): The sentence applies to every individual 
+        2. The existential quantifier (&exist;): The sentence applies to at least some individual.
+- For example: 
+    - "Some people just do not listen. [(&exist;x)(P<sub>x</sub> &amp; ~L<sub>x</sub>)]"
+    - "All is well that ends well. [(&forall;x)(E<sub>x</sub> &sup; W<sub>x</sub>)]"
+    - "Nobody likes a smartass. [~(&exist;x)(P<sub>x</sub> &amp; (&forall;y)(S<sub>y</sub> &sup; L<sub>x</sub><sub>y</sub>)]"
+- Exercise 
+    - Symbolize the following using the symbols given 
+        - Some people can't be bought (P, B). 
+        - A penny saved is a penny earned (P, S, E) 
+        - Every dog has day (D, D', H). 
 
 #### <a id="#3A4b"></a>Predicate Arguments
 
-Predicate arguments 
-A valid predicate argument: 
-A geese are birds. 
-A birds have wings. 
-A geese have wings. 
-(Vx)(Gx Bx) 
-Another valid argument (different form): 
-All men are mortal. 
-Socrates is a man. 
-Socrates is mortal. 
+- A valid predicate argument: 
+    - A geese are birds. [(&forall;x)(G<sub>x</sub> &sup; B<sub>x</sub>)]
+    - A birds have wings. [(&forall;x)(B<sub>x</sub> &sup; W<sub>x</sub>)]
+    - -->
+    - A geese have wings. [(&forall;x)(G<sub>x</sub> &sup; W<sub>x</sub>)]
+- Another valid argument (different form): 
+    - All men are mortal. [(&forall;x)(M<sub>x</sub> &sup; M'<sub>x</sub>)]
+    - Socrates is a man. [M<sub>s</sub>]
+    - Socrates is mortal. [M'<sub>s</sub>]
 
 ### <a id="#3A5"></a>Probabilistic Logic
 
-Probabilistic logic 
-We need to assess non-valid arguments 
-too 
-E.g., weather forecasts 
-Apply domain-specific knowledge 
-Probabilities can represent such 
-knowledge 
-• E.g., the probability of rain is 40% 
-Extend propositional logic for this purpose 
+- We need to assess non-valid arguments too 
+    - E.g., weather forecasts 
+- Apply domain-specific knowledge 
+- Probabilities can represent such knowledge 
+    - E.g., the probability of rain is 40% 
+- Extend propositional logic for this purpose 
 
 #### <a id="#3A5a"></a>Probabilistic Symbolization
 
-Probability symbolization 
-Probability of proposition p: pr(p) — 
-10... Il 
-pr(p) O if p is certainly false and 
-2 pr(p) 1 if pis certainly true. 
-Examples: 
-p — "It Will snow in January.- pr(p) .99 
-p: "It Will snow in April." pr(p) .65 
-p — "It will snow in August." pr(p) .02 
-Probability rules 
-Rules for probabi ities of complex sentences: 
-1 . 1 — pr(p) 
-2. pr(p v q) if p q mutually exclusive 
-3. • pr(q), if p and 
-Examples: 
-snow in January.) I — in I - 
-.gg- .01 
-or 2 on adie roll") — prtl on roll") prr2 on a 
-die roll") - 1/6 1,'3 
-in January and in January ) 
-in .99. .65: 6435 
-is an artsve given that she's female.) ?? 
+- Probability of proposition _p_: pr(p) = [0...1]
+    1. pr(_p_) = 0 if _p_ is certainly false and 
+    2. pr(_p_) = 1 if _p_ is certainly true. 
+- Examples: 
+    - _p_ = "It Will snow in January." pr(_p_) = .99 
+    - _p_ = "It Will snow in April." pr(_p_) = .65 
+    - _p_ = "It will snow in August." pr(_p_) = .02 
+- Probability rules 
+    - Rules for probabi ities of complex sentences: 
+        1. pr(~_p_) = 1 - pr(_p_)
+        2. pr(_p_&or;_q_) = pr(_p_) + pr(_q_)
+        3. pr(_p_&amp;_q_) = pr(_p_) &bull; pr(_q_)
+        4. pr(_p_|_q_) = pr(_p_&amp;_q_) / pr(_q_)
+    - Examples: 
+        - pr("no snow in January") = 1 - pr("snow in January") = 1 - .99 = .01
+        - pr("1 or 2 on a die roll") = pr("1 on a die roll") + pr("2 on a die roll") = 1/6 + 1/6 = 1/3
+        - pr("snow in January and April") = pr("snow in January") &bull; pr("snow in April") = .99 &bull; .65 = .6435
+        - pr("someone is an artsie given that she's female") = ??
 
 #### <a id="#3A5b"></a>Probabilistic Arguments
 
-Probability arguments 
-An argument is convinc'ng if 
-. pr(clr) preen 
-r — reason, c — conclusion 
-Example: 
-Verv often. it has snowed in January. 
-Probably, it WI I snow next January. 
-Calcu ations: 
-pr(NlJ) - pr(N & - (.9. - g 
-pr(-NlJJ - pr(-N & — • 
-The argument is a strong one, probabilistically 
-Probability arguments (cont.) 
-A weak argument? 
-Not a bear in sight. 
-The Bear Patrol works. 
-Calculations: 
-w 
-• pr(Wl-B) pr(W & (.5 • .99)/.99 .5 
-• pr(-Wl-B) prew & (.5 • .99)/.99 .5 
-The argument is weak 
-• Assuming pr(W) pr6W) 
+- An argument is convincing if 
+    - pr(_c_|_r_) >> pr(~_c_|_r_)
+    - _r_ = reason, _c_ = conclusion 
+- Example: 
+    - Verv often. it has snowed in January. 
+    - -->
+    - Probably, it WI I snow next January. 
+- Symbolicly:
+    - J
+    - -->
+    - N
+- Calculations: 
+    - pr(N|J) = pr(N &amp; J)/pr(J) = (.9 &bull; .99)/.99 = .9
+    - pr(~N|J) = pr(~N &amp; J)/pr(J) = (.1 &bull; .99)/.99 = .1
+- The argument is a strong one, probabilistically 
+- A weak argument? 
+    - Not a bear in sight. 
+    - -->
+    - The Bear Patrol works. 
+- Symbolicly:
+    - ~B
+    - -->
+    - W
+- Calculations: 
+    - pr(W|~B) = pr(W &amp; ~B)/pr(~B) = (.5 &bull; .99)/.99 = .5
+    - pr(~W|~B) = pr(~W &amp; ~B)/pr(~B) = (.5 &bull; .99)/.99 = .5
+- The argument is weak 
+    - Assuming pr(W) = pr(~W) 
 
 ## <a id="#3B"></a>Evaluation of Logic
 
-Evaluation of logic 
-
 ### <a id="#3B1"></a>Overview
 
-Overview 
-Formal logic provides for the symbolization 
-and evaluat'on of arguments 
-Does logic capture laws Of thought? 
-• Aristotle and Boole agreed, Frege d'd not 
-Why did the pioneers of CogSci look to 
-formal logic? 
-• Powerful and rigourous 
-• Amenable to computational mode ing 
-• Logical thinking 's a hallmark of intelligence 
+- Formal logic provides for the symbolization  and evaluation of arguments 
+- Does logic capture **laws of thought**? 
+    - Aristotle and Boole agreed, Frege d'd not 
+- Why did the pioneers of CogSci look to formal logic? 
+    -  Powerful and rigourous 
+    -  Amenable to computational modeling 
+    -  Logical thinking is a hallmark of intelligence 
 
 ### <a id="#3B2"></a>Representational Power
 
-Representational power 
-Propositional logic captures some val'd 
-arguments, e.g., (modus ponens) 
-If it rains, then the Sidewalk gets Wet. 
-s rain. 
-The is Wet. 
-Predicate logic captures more valid arguments, 
-e.g., 
-All men are 
-is a man. 
-is a mortal, 
-Sentences 
-To symbolize arguments, formal logic 
-focuses on statements 
-There are other kinds of sentences, e.g., 
-• Questions: "How do I get to the Bookstore 
-from here?" 
-• Orders: "Set your phasers to k'll!" 
-• Requests: "Would you pass the 
-salt, please?" 
-Texts 
-Not all texts are arguments, e.g., 
-"I'm sorry but this reading initiative. 'm sorry, Ive 
-never been a fan of books. I don't trust them. They're 
-all fact, no heart. I mean, they're elitist, tel ing us what 
-is Or isn't true, or what did or didn't happen. Who's 
-Britannica to tell me the Panama Cana was built in 
-1914? f I want to say it was buit in I g41, that's my 
-right as an American! I'm with the prescient, let 
-history decide what did or did not happen." 
-Representational limitations 
-Predicate logic is specialized where 
-natural languages are generalized 
-Doesn't the generalized nature Of 
-language reflect the generalized nature of 
-thinking, and so mental representations? 
-Formal logic has been extended to 
-address other k nds of sentences 
-The extensions are complex and unwieldy in 
-combination 
+- Propositional logic captures some valid arguments, e.g., (_modus ponens_) 
+    - If it rains, then the sidewalk gets Wet.
+    - It is raining. 
+    - -->
+    - The sidewalk is wet. 
+- or symbolicly:
+    - R &sup; W
+    - R
+    - -->
+    - W
+- Predicate logic captures more valid arguments, e.g., 
+    - All men are mortal. [(&forall;x)(M<sub>x</sub> &sup; M'<sub>x</sub>)]
+    - Socrates is a man. [M<sub>s</sub>]
+    - Socrates is mortal. [M'<sub>s</sub>]
+- Sentences 
+    - To symbolize arguments, formal logic focuses on statements 
+    - There are other kinds of sentences, e.g., 
+        - **Questions**: "How do I get to the Bookstore from here?" 
+        - **Orders**: "Set your phasers to kill!" 
+        - **Requests**: "Would you pass the salt, please?" 
+- Texts 
+    - Not all texts are arguments, e.g., 
+> I'm sorry but this reading initiative. I'm sorry, I've never been a fan of books. I don't trust them. They're all fact, no heart. I mean, they're elitist, telling us what is or isn't true, or what did or didn't happen. Who's Britannica to tell me the Panama Cana was built in 1914? If I want to say it was built in 1941, that's my right as an American! I'm with the prescient, let history decide what did or did not happen." 
+- Representational limitations 
+    - Predicate logic is specialized where natural languages are generalized 
+    - Doesn't the generalized nature Of language reflect the generalized nature of thinking, and so mental representations? 
+    - Formal logic has been extended to address other kinds of sentences 
+        - The extensions are complex and unwieldy in combination 
 
 ### <a id="#3B3"></a>Computational Power
 
-Computational power 
-Argument construction is a model of 
-intelligent thinking 
-E.g., when Homer said 
-a bear in sight. The Bear patrol must like 
-a charm," 
-was he thinking. 
-is a Bear patrol 
-Not a bear in Sight 
-The Bear Patrol keeps bears away 
-Perhaps thinking is applying rules to symbols, 
+- Argument construction is a model of intelligent thinking 
+- E.g., when Homer said 
+> "Not a bear in sight. The Bear patrol must like a charm," 
+- was he thinking...?
+    - There is a Bear patrol 
+    - Not a bear in Sight 
+    - -->
+    - The Bear Patrol keeps bears away 
+- Perhaps thinking is applying rules to symbols, e.g.
+    - p &sup; q
+    - p
+    - -->
+    - q
 
 #### <a id="#3B3a"></a>Planning
 
-Planning 
-Planning: represent goals and steps to ach eve 
-them 
-E.g., Go from Guelph to LJW: 
-3. reach(l University-Ave) 
-4. reach(l.Llniversity-Ave) trave (l, University-AVC) 
-5. trave reacMI,UW) 
-Note the change 'n notation favoured by 
-Cognitive Scientists 
-A route could be deduced from these rules 
-Planning (cont.) 
-pro: if a route exists, deduction will determine it 
-Cons: Many valid inferences are not helpful: 
-If I travel Hwy-7 and Hwy-85, I could deduce. 
-• travel(l,Hwy-7) & 
-. travel( ,Hwy-7) & & 
-The relevance of an inference s unconnected 
-with its validity 
-Planning (cont.2) 
-Deduction is monotonic 
-Planning must often be norrmonotonic 
-E.g., a route s blocked 
-monotonic 
-non-monotonic 
+- **Planning**: represent goals and steps to achieve them 
+- E.g., Go from Guelph to UW: 
+    1. travel(I, Hwy-7) --> reach(I, Hwy-85)
+    2. reach(I, Hwy-85) --> travel(I, Hwy-85)
+    3. travel(I, Hwy-85) --> reach(I, University-Ave)
+    4. reach(I, University-Ave) --> travel(I, University-Ave)
+    4. travel(I, University-Ave) --> reach(I, UW)
+- Note the change in notation favoured by Cognitive Scientists 
+- A route could be **deduced** from these rules 
+- Pro: if a route exists, deduction will determine it 
+- Cons: Many valid inferences are not helpful: 
+    - p ["Conjunction"]
+    - q
+    - -->
+    - P &amp; q
+- If I travel Hwy-7 and Hwy-85, I could deduce:
+    - travel(I, Hwy-7) &amp; travel(I, Hwy-85)
+    - travel(I, Hwy-7) &amp; travel(I, Hwy-85) &amp; travel(I, Hwy-7)
+- The relevance of an inference s unconnected with its validity 
+- Deduction is **monotonic**
+- Planning must often be norrmonotonic 
+    - E.g., a route s blocked 
+        - monotonic
+        - non-monotonic 
 
 #### <a id="#3B3b"></a>Decision
 
-Decision 
-Decision: choosing among plans 
-Deduction only determines if plans exist 
-• Preferences need to be added, e.g., 
-travel(l,Hwy-7) —9 & prefer- 
-Assumptions of this approach: 
-I can completely order my preferences, and 
-2. I can know all my preferences before I make 
-my plans. 
-Decision (cont.) 
-Perhaps probabil'ties could address these 
-assumptions 
-• E.g., decide among English, German, Philosophy 
-courses 
+- **Decision**: choosing among plans 
+- Deduction only determines _if_ plans exist 
+    - Preferences need to be added, e.g., travel(I, Hwy-7) --> reach(I, Hwy-85) &amp; preferto(I, Hwy-7, Hwy-401)
+- Assumptions of this approach: 
+    1. I can completely order my preferences, and 
+    2. I can know all my preferences before I make my plans. 
+- Perhaps probabilities could address these assumptions 
+    - E.g., decide among English, German, Philosophy courses 
 is is English") 
-This solut'on is computationally explosive 
-• pr(AlB) must be known for every A and B 
-. For n predicates, there 2M conditional 
-probabilities 
+    - pr("C is interesting" | "C is english")
+- This solut'on is computationally explosive 
+    - pr(A|B) must be known for every A and B 
+    - For n predicates, there 2<sup>n-1</sup> conditional probabilities 
 
 #### <a id="#3B3c"></a>Explanation
 
-Explanation 
-Why doesn't my favorite Website load? 
-Your browser has a bug; 
-Your connection s not working properly; 
-Your server at your service provider is not 
-working; 
-The Website server is not working; 
-The URL is incorrect. 
-Explanation2 
-Some deductions are explanations (Hempel) 
-—respond(Website) —9 incorrect(URL) 
-yespprV(Website) 
-incorrect(URL) 
-Problems: 
-Multiple explanations? 
-Some deductions are not explanations, e.g., the 
-height of a flagpole 
-How do you explain the height of a flagpole? 
-Explanation3 
-Some explanations are abductions (Peirce) 
-down(Website-server) —9 —readable(Website) 
--readableIW ebsite) 
-down (Website-sewer) 
-Problems: 
-. Such inductions are risky 
-. Use conditional probability to determine the best 
-explanation, e.g., prCM/ebsite server is 
-Website is not readable.) 0.4 
+- Why doesn't my favorite Website load? 
+    1. Your browser has a bug; 
+    2. Your connection s not working properly; 
+    3. Your server at your service provider is not working; 
+    4. The Website server is not working; 
+    5. The URL is incorrect. 
+- Some deductions are explanations (Hempel) 
+    - ~respond(Website) --> incorrect(URL) 
+    - ~respond(Website)
+    - -->
+    - incorrect(URL)
+- Problems: 
+    - Multiple explanations? 
+    - Some deductions are not explanations, e.g., the height of a flagpole 
+- How do you explain the height of a flagpole? 
+    - Some explanations are **abductions** (Peirce) 
+        - down(Website-server) --> ~readable(Website) 
+        - -readable(Website) 
+        - -->
+        - down(Website-server) 
+- Problems: 
+    - Such inductions are risky 
+    - Use conditional probability to determine the best **explanation**, e.g., pr("Website server is down"|"Website is not readable") = 0.4 
 
 #### <a id="#3B3d"></a>Learning
 
-Learning 
-Abduction is a form Of learning 
-Inductive generalization also, e.g., 
-Philosophy(PhiI-128) 8 interesting(PhiI- 128) 
-Philosophy(Phil-256j & interesting(Phil-256) 
-interesting(x)) 
-Problem: risk jump ng to conc usions 
-DO you reason in this way? When? 
+- Abduction is a form Of learning 
+- Inductive generalization also, e.g., 
+    - Philosophy(Phil-128) &amp; interesting(Phil-128) 
+    - Philosophy(Phil-256) &amp; interesting(Phil-256) 
+    - -->
+    - (&forall;x)(Philosophy(x) --> interesting(x)) 
+- Problem: risk jumping to conclusions 
+- Do you reason in this way? When? 
 
 #### <a id="#3B3e"></a>Psychological Plausibility
 
-Psychological plausibility 
-Subjects agree that modus ponens is 
-deductive, but not affirming the 
-consequent: 
-If the Bear Patrol works, then no bears are in sight 
-No bears are 'n sight 
-Therefore, the Bear Patro works 
-Do people think deductively? 
-Plausibility2 
-Wason card task: 
-given four cards from a deck with numbers on 
-one sue & letters on the other: (Al (Bl (2) (31. 
-Flip which cards to test the rule: If a card has 
-an A on one side, then it has an even number 
-on the Other side 
-Most subjects select IA) and 12); many 
-omit 13) 
-Plausibility3 
-Explanations: 
-• People are not logical, do not apply modus tollens: 
-. People employ schemata 
-• People employ mental models: represent (Al and 
-even-number; assume only represented items are 
-Plausibility4 
-People do not seem to think in accord with the 
-axioms of probability, e.g., 
-. pr(a) pr(b) pr(b) 
-Suppose Frank likes to read French literature, 
-attend foreign films, and discuss world politics 
-People often judge that 
-pr("college-educated") pr("carpenter") pr("carpenter") 
-Instead of probability, people employ stereotypes 
+- Subjects agree that modus ponens is deductive, but not affirming the _consequent_: 
+    - If the Bear Patrol works, then no bears are in sight 
+    - No bears are in sight 
+    - -->
+    - Therefore, the Bear Patrol works 
+- Do people think deductively? 
+- Wason card task: 
+    - given four cards from a deck with numbers on one side & letters on the other: [A] [B] [2] [3]. 
+    - Flip which cards to test the rule: If a card has an A on one side, then it has an even number on the Other side 
+- Most subjects select [A] and [2]; many omit [3] 
+- Explanations: 
+    - People are not logical, do not apply **modus tollens**: 
+        - p &sup; q
+        - ~q
+        - -->
+        - ~p
+    - People employ schemata 
+    - People employ mental models: represent [A] and even-number; assume only represented items are relevant
+- People do not seem to think in accord with the axioms of probability, e.g., 
+    - pr(a) &bull; pr(b) < pr(b) 
+- Suppose Frank likes to read French literature, attend foreign films, and discuss world politics 
+- People often judge that 
+    - pr("college-educated") &bull; pr("carpenter") > pr("carpenter") 
+- Instead of probability, people employ stereotypes 
 
 #### <a id="#3B3f"></a>Summary
 
 ----------
-
-
 
 # <a id="#4"></a>Lecture 4. Rules
 
@@ -923,6 +889,255 @@ Instead of probability, people employ stereotypes
 
 ### <a id="#4B6"></a>Philosophical Issues
 
+
+Overview 
+Rule: an IF..THEN... structure modeled on 
+implication (3), e.g. 
+IF a king is in check AND no move can remove it from 
+check THEN the checking player wins. 
+Basic idea. 
+Preserve the representational power of logic 
+• Extend and generalize it as needed 
+Adaptations include: 
+• Different meaning for IF... THEN structures 
+• Define and apply search strategies for rule use 
+History of rules 
+Logic Theorist (L T) developed by Newell & 
+Simon (1950s) 
+• Imitate theorem-proving methods of students 
+. Used backward chaining and subgoaling 
+Generalized Problem Solver (GPS) 
+developed in the 1960s 
+• Solve any sort of problem 
+Used means-ends analysis 
+and difference lists 
+History2 
+Limitations of GPS include: 
+• Certain problems, e.g., chess, were beyond 
+'ts capabilities 
+Cou d not learn from experience 
+Modern systems address limitations of 
+GPS, e.g., 
+• ACT-R (Anderson) 
+• SOAR (Newe l, Laird, Rosenbloom) 
+Expert systems, e.g., MYCIN, also 
+Rule-based systems 
+Three components: 
+representation of goal and initial condition, 
+a database ot rules, and 
+a strategy or algorithm for applying the ru es 
+Initial condition of Towers ot Hanoi problem: 
+Peg contains a, b, and c trom top to enottom 
+Peg 2 is empty 
+peg 3 is ernpty 
+Disc a «discb disc disc c 
+Goal: peg 3 contains discs a, b, and c from top to 
+bottom 
+Knowledge 
+The ru e database represents the knowledge of 
+the system, e.g., the Towers of Hanoi problem. 
+IF disc x is on top of peg i and peg j is empty THEN 
+move dsc x on top of peg j 
+IF disc x is on top of peg i and disc y is on of peg 
+j and x y THEN mcwe disc x on top of peg j 
+Perhaps one rue would do, e.g., 
+IF peg I contains discs a, b and c from top to 
+bottom THEN move a to 3, b to 2, a to 2, c to 3, a to 
+1, bt02, at03 
+Often, we are not so fortunate 
+Knowledge2 
+Rules may be combined to arrive at a plan 
+Ill. 
+VIL 
+F disc a is on top Of peg 1 and 3 is empty THEN a to 3 
+F disc b is on top peg 1 2 is empty THEN b to 
+disc a s on top peg 3 and die b is on 01 peg 2 and a b 
+THEN move a to 
+disc c is on top Of peg 1 and peg 3 is THEN move c to 3 
+F son 
+top of 2 d —g 
+THEN 
+IF b is top of "g 2 dix c 
+top ot —g b c 
+THEN b to 3 
+top of "g 2 dix b is of peg 3 a b 
+THEN 
+Rules are a so known as productions and rule-based 
+systems as production systems 
+Discussion questions 
+In what situations to you apply rules? DO 
+you apply Other kind Of knowledge then as 
+What sorts of knowledge are difficult to 
+capture in terms of rules? 
+Search 
+Determining which rules to combine and 
+how is accomplished by search 
+Search is guided by search strategies 
+• May be systematic, random, etc. 
+Search through a database of rules is a 
+knowledge search 
+Knowledge space 
+In a physical search, 
+. Search occurs in a specified area 
+Begins in an initial locat'on 
+. Visits neighbouring locations unt'l the goal is found 
+In a knowledge search 
+. Search occurs in a knowledge space 
+Begins with an initial condition 
+. Visits neighbour'ng condit'ons until a goal condit'on is 
+found 
+Case: tic-tac-toe 
+Initial condition: blank board 
+Neighbouring conditions: next move 
+Goal state: a win 
+Search strategies 
+Forward strategy: compare current situation 
+with IF conditiom on a match, apply THEN action 
+. Analogous to modus ponens 
+Backward strategy: compare goal state to 
+actions; on a match, adopt the IF condition as a 
+subgoal 
+. Analogous to affirming the consequent 
+• UsedbyLT and GPS 
+Bidirectional strategy: forward or backward 
+Heuristics 
+Any strategy can be conducted in several ways 
+(heuristics) 
+Depth-first search: apply the first rule that matches 
+• Like traveling 'deep' into the knowlec$e space 
+Breadth-first search: apply every rule that matches 
+• Like traveling across the space 
+Heuristics2 
+Best-first search: rank every rule that applies, 
+attempt the best one first 
+. The ranking function is called the heuristic function 
+Used by GPS 
+Strategy selection 
+Depends on the distribution of goals 
+Tic-tac-toe: f0Ndard, best-first 
+Space small, goals p entifu 
+Rules can be searched in predetermined order 
+Wim IF a blat' s flanked by two of my pieces THEN ciay it 
+Block F a blank is flanked by two my opponent's pieces 
+THEN play it 
+3. Center; IF the center blank THEN play it 
+4. Cornet: IF a corner ig empty THEN play it 
+5. IF a Square is empty THEN it 
+Selection2 
+Chess: space large, goals sparse 
+• Opening: use "gambits", forward, breadth-first 
+• Midgame: adopt strong positions as subgoals, 
+backward 
+• Endgame: wins available, backward, depth- 
+first 
+Strategies vary with expertise 
+• Experts can employ best-first, novices depth- 
+first 
+Overview 
+Main elements of rule-based systems: 
+• Database of rules 
+• Strategy for searching knowledge space 
+Discussed problem solving 
+Evaluation issues include: 
+• Are rules mental representations? 
+• Is search a mental procedure? 
+Representational power 
+Logic is highly specialized 
+Rules are more flexible, e.g., 
+"All birds fly. 
+IF x is a bird THEN x flies. "Usually..." 
+In logic, exceptions are disastrous, e.g., 
+2 
+a, 
+pp 
+Representation2 
+'All birds fly" 
+'All penguins are birds" 
+'No penguins fly" 
+'Pete is a penguin" 
+Valid arguments would admit contradictions, e.g., 
+Consider simi ar rules: 
+IF THEN bird(x) 
+IF bird(x) THEN tiy(x) 
+IF penguin(x) THEN not.fly(x) 
+The system could retract I upon I ,4 
+Representation3 
+Exceptions are acceptable because the 
+system is not absolutely committed to its 
+conclusions 
+Rule are interpreted as defaults 
+Rule systems are non-monotonic 
+• They are not engaged in deduction 
+On this view, deduction has little/no role in 
+cognition 
+Explanation 
+Forward chairing (like deduction) 
+IF Psych-101 fills up quickly THEN it has a 
+Backward chaining (like abduction) 
+IF Psych- 101 has a popular p.ofessor THEN it up quvckty. 
+For the best exp anation, attach a likelihood to each rule 
+to anticipate 
+Explanations could be generated by a rule trace 
+. IF a patient has some set Of symptoms THEN he has 
+appendicitis 
+. The system can only say that it applied a given rule, 
+not why the ru e is appropriate 
+Learning 
+Inductive generalization: use constant conjunctions to 
+acquire rules 
+After several instances, conclude IF a class has a popular 
+professor THEN it fills up 
+Can lead to inconsistent rules 
+Chunking (compos'tion). 
+The first string is harder to recall than the second one: 
+I. .rp,'bvqmsdl 
+2. am the ve'y mode/ ot a modern nwor-generat' 
+condense rules together. e.g., F you travel Hwy-7, Hwy86, 
+University Ave THEN you reach UW 
+Specialization: acquire rules for exceptions, e.g., 
+IF pu travel Hwy-7, HWY-BE, University-Ave AND it'S rush 
+hour THEN you reach UW 
+Language 
+Associative theories (pre-Chomsky) 
+Generative theories (Chomsky) 
+Apply rules to assign syntactic structure: 
+NP dogs. cats, cows, grass 
+vp V NP 
+V chase, eat. admire 
+Pinker: some conjugations learned associatively, 
+e.g., past tense of "sing" and "ring" 
+Computational limitations 
+Do expert systems scale up? 
+• Can specialized knowledge simply be 
+combined to simulate general inte ligence? 
+The scaling problem: adding more rules 
+becomes ineffective 
+• Conflicts among rules increase 
+• Thrashing: managing conflicts dom'nates 
+search effort 
+Psychological plausibility 
+Rules do well simulating expert performance 
+• Domain-specific 
+• Automatic and quick 
+Acquired through training 
+Novice performance 
+• Domain-general 
+• Tentative and slower 
+• Requires more effort 
+Power law of practice 
+Have you observed the power law in effect? 
+Philosophical issues 
+Newell: combining chunks of knowledge 
+(rules) is central to intelligence 
+• An expression the classical CogSci view 
+Frame problem (Minsky): 
+Intelligent beings need to distinguish relevant from 
+irrelevant knowledge 
+However, adding more rules to capture this 
+need may become counterproductive 
+What solutions might there be? 
+2 
+3. 
 
 ----------
 
@@ -986,6 +1201,214 @@ Instead of probability, people employ stereotypes
 #### <a id="#5B4c"></a>Learning
 
 
+Overview 
+Concept: a chunk of more-or-less general 
+knowledge 
+• An idea or general description 
+Functions of concepts include: 
+• Categorization, e.g., the good (Socrates) 
+• Configuration of experience, e.g., words 
+(Kant) 
+• Foundation of inductive inferences, e.g., a 
+growling dog (Smith) 
+History of concepts 
+Epistemology: 
+• How well do concepts allow us to categorize 
+things e.g., justice? 
+• Do concepts present a sensible picture of reality? 
+(Is the concept human that of a featherless 
+bped?) 
+Psychology: What are concepts? 
+Propositions (Hobbes), images (Aristotle), 
+abstractions (Locke), words (Wittgenstein), frames 
+(Minsky), or distributed representations (Hebb)? 
+Learning: how are concepts acquired? 
+• Through experience, e.g., red (Locke) 
+• Innate (built-in), e.g., physics (Piaget) 
+Theories of concepts 
+The class'ca view: concept X is the definition of 
+X, the set of jointly necessary and sufficient 
+conditions that must be had to be an X 
+. Necessary: properties all Xs must have 
+. Sufficient: anything With all the necessary properties 
+is an X 
+E.g., bachelor: an unmarried man 
+Strengths of the class'ca theory: 
+. Applies well to technical (nominal) like 
+bachelor, triangle, contract 
+Definitions 
+Limitations: natural kinds 
+. Centra properties seem 
+dispensable, e.g., tiger 
+. Typ'cality effects, e.g., bird 
+Exercise (pairs): One person define fruit, the 
+Other vegetable (30 seconds) 
+Prototypes 
+Prototypes: list of typical or standard features 
+(Rosch 1970) 
+Not all features are necessary 
+"family resemblance" (Wittgenstein) 
+Exercise: write down the typical features of a 
+game (30 seconds) 
+The typ'ca 'ty of instance I to prototype P is 
+computed by a score of similarity (Tversky's 
+contrast rule): 
+a.f( 'P) - b.f(P-l) - c.f(l-P) 
+Prototypes2 
+Strengths of the theory include: 
+• Explains Wpicallty effects, e.g., robin vs. penguin 
+• Applies to other concepts types, e.g., artifacts, psychological 
+and psychiatric terms 
+Limitations of the theory inc ude: 
+• Technical coru:epts exhbit typicaliW 
+but not fuzziness 
+• Features do not weigh independently 
+Metal Big- 
+smal 
+• People do not discard information about class size or 
+variability (e.g., 
+Exemplars 
+Exemplar: a good instance Of a concept 
+• A robin is a good bird 
+Classification is a score computed by 
+• Comparison with exemplars, or 
+• Construction of a prototype from exemplars 
+Classification is done "on the fly 
+• E.g., Arts professor 
+Exemplars2 
+Strengths of the exemplar theory. 
+Preserves typicality judgements 
+. Explains how people have access to class s'ze and 
+variability 
+Which c ig or more diverse, or spoonQ 
+. Accounts for dependence Of features 
+Limitations Of the exemplar theory: 
+. HOW are exemplars affected by learning general 
+facts ? 
+• Exemplars do not explain the existence of general 
+categories 
+Causal theory 
+Causal theory: X is a C if x obeys theories that apply 
+to C 
+• E.g., tomatoes as entrees 
+Explains natural/artifactual difference, e.g. 
+• A broom can become a hockey stick 
+• A goose cannot become a swan 
+Causal theory (cont.) 
+Explains centrality of some features 
+• Straight banana more typical than straight boomerang 
+Limitations. 
+• Some causal theories have no effect, e.g, unicorn 
+• Method may depend upon context, e g. , quick and dirty method 
+Overview 
+Exemplar and causal theories most promising 
+Examine frames (Minsky, 1974) 
+Slots and fillers 
+Review procedures on frames: 
+Inheritance 
+. Matching 
+Psychological plausibility 
+Frames 
+Minsky was concerned about the relevance 
+(frame) problem in logic and rules 
+Rules do not tell us what not to do 
+Proposal: collect relevant information together 
+into frames, a list of slots and various fillers 
+• Also called schemas 
+Frames can be a computational representation 
+of concepts 
+The course frame 
+Frame: course 
+I . A kind of; process of 
+2 Subtypes: lecture, seminar, lab, correspsndence 
+3. Instructor; 
+6. Evaluation; quizzes, essays, 
+7. Examples, 256, psych 101, 
+g. Relations: 2 affects 
+The dine out script 
+Frame: dine out 
+I. A kind Of: dining event 
+2. Subtypes: sit-down', 
+take-out, fancy-sit-down 
+3. Location: 
+4. Time: 
+a. Get to location 
+b. Enter and be seated 
+c. peruse menu 
+d. Order food 
+e. Eat tcn»d 
+t. Obtain and pay chequæ 
+6. Examples: Burger King, 
+Kooh-I-Noor, Mongolian Gri I 
+7. Relations: 2 affects 5 
+Frames (cont.) 
+Suitable for stereotyped s'tuations 
+• Automatism: and the 
+Rues would lose relevance Structure: 
+THEN get to 
+IF you get to THEN —ted 
+a-kind-of and subtype slots 
+capture hierarchical organization 
+Of concepts 
+Exerc'se: represent some 
+concept as a frame 
+Computational power 
+Newell: knowledge search is the most 
+basic ability Of an intelligent mind 
+Matching is fundamental to concepts: 
+Any process that relies on Simi arity to 
+associate chunks Of knowledge 
+Concepts also involve inheritance: 
+Information inherent in the configuration of 
+knowledge 
+Inheritance 
+Concepts 'nherit information through hierarchical 
+organization 
+Dogs have fur a is a mammal 
+Simi ar to rules (forward usage) 
+mal THEN 
+IF x is a dog THEN x is a 
+Slots may encode defaults, e.g., 
+• Dog: Boppy ears 
+• w feet 
+Inheritance (cont.) 
+Exceptions can be explicitly noted. 
+(Mexican hairless) Pans: not-has-tur 
+(Peruin) Abilities: not-fly 
+'k Imagine following a link vs. searching Google 
+Matching 
+Wh'ch concept best fits the current situation? 
+Realized by competition for activat'on 
+• by excitatory and inhibitory 
+• Concludes when activation pattern ceases to change 
+• E.g., deciding ona child's name 
+Exploits content organization of mernory 
+• a-kind-of 
+• a-pan-ot 
+• examples 
+Plausibility 
+Scripts can support planning 
+. E.g., howiwhen to do assignments 
+. Scripts can be inflexible (e.g., a hockey game?) 
+Frames a so support explanations 
+. Why is there money on a restaurant table? 
+Why is a Camero in the ditch? 
+(overgeneralize) 
+. Why is there a goat in the restaurant? 
+(inflex'b e) 
+Learning 
+Definition 
+• zythum 
+Specialization (zythum again) 
+Copy'ng with substitution 
+. Road rage, air rage, boat rage 
+computer rage, parking rage, 
+shoppyng rage 
+Generalization 
+pull a Homer 
+Combination 
+. Mouse potato, wavic/e 
+
 ----------
 
 # <a id="#6"></a>Lecture 6. Analogy
@@ -1047,6 +1470,228 @@ Instead of probability, people employ stereotypes
 
 ### <a id="#6B5"></a>Limits of Analogical Reasoning
 
+
+Overview 
+Frames replace search with association 
+• This move mitigates the frame problem 
+• But, is a concept-based account flexible enough to 
+model intelligent behaviour? 
+Analogy applies old concepts to novel situations 
+. E.g., advising the 80 year-old groom 
+Examine and evaluate theories of analogy 
+• Esp. the multiconstraint theory (Holyoak & Thagard) 
+Analogy as inductive 
+generalization 
+Aristotle: analogies are 4-part proportions 
+• E.g., 6:12 
+• E.g., wine-cup:Dionysus spear:Ares 
+Consider the warfare analogy: 
+• Thebans:Phocians :: Athenians:Thebans 
+Works via inductive generalization: 
+lhs general rule —9 rhs 
+. The generalization occurs in the first step 
+Generalization 
+The first step infers a rule from a single instance: 
+It was wrong for the Thebans to attack the Phocians 
+It is wrong for a state to attack its neighbour 
+Th's process is an example of jumping to 
+conclusions 
+How to complete the following proportions? 
+• abc..abd xyz?? 
+. abc-abd kji:?? 
+The given information does little to constrain the 
+rule in each case 
+Analogy as extrapolation 
+Extrapolation: continue a trend into an area of sparse 
+data 
+Analogy as extrapolation (Mill 1872): 
+Items X and Y have features p, q, and r 
+Item X has feature s 
+Probably, item Y has feature s 
+Robert Plot (ca. 1600) on arrowheads 
+BritÉh artifacts and Indian artifacts are triangular, 
+sharpened, and worn. 
+Indian artifacts are used for war aM huntinq. 
+Probamy. British antacts were used for war 
+and hunting. 
+Extrapolation 
+The arrowheads ana ogy seems 
+strong 
+Consider the Earth and Moon 
+There are many similarities 
+The Earth is inhabited 
+Probably, the moon is inhabited 
+Is this argument strong? 
+The extrapolation seems indifferent 
+to relevance 
+The Multiconstraint theory 
+Rule-based accounts 
+emphasize the weaknesses Of 
+analogy 
+Associative accounts identify its 
+strengths 
+E.g the Multiconstraint theory 
+(MT) of Holyoak and Thagard 
+(legs) 
+Analogy: an a ignment Of 
+structured sets of concepts 
+Analogical mappings 
+The Ford Excursion, per Dan Becker: 
+"It's basically a garbage truck that dumps into the sky." 
+Arribu'e 
+G truck 
+gartuge 
+g mund 
+ground) 
+el du 'rate I 
+tecausefpal.lute.lvnetratej 
+Ford 
+Ford H 
+exhau st 
+st, sky) 
+, Irrmate) 
+poll 
+Analogical coherence 
+The goodness of an analogy is its coherence: 
+Structural consistency: the analogy should exhibit 
+a one-to-one correspondence (systematicity in 
+Gentner). 
+Similarity. corresponding items should be similar. 
+pragmatic utility the analogy addresses the 
+problem at hand. 
+Coherence is a matter of degree 
+There are severa possible system relations, 
+e.g., etc. 
+Overview 
+Analogy is important to a concept-based 
+account of cognition 
+Examine the power of analogical thinking 
+• As per the MT of analogy 
+Explore its possibilities and limitations 
+Verbal representation 
+Some analogies are essentially verbal, e.g., 
+'The English Department will not accept that a fine 
+novelist like Stone has anything to contribute to my 
+literary education. Having Stone teach literature is, in 
+their eyes, like having a gorilla teach zoology." 
+Zoology 
+zoologist 
+gorilla-behavior 
+gorilla 
+observe (zoologist,gorilla-behavior) 
+rstand(zoologist, v ior) 
+cannot-teach(gorilla.zoologist) 
+so-tha t(obv , understand) 
+Literary criticism 
+critic 
+Stom-novels 
+Stone 
+obse Is) 
+cannot-teach(Stone.critic) 
+,criticizc) 
+because (not. consult, canno t-teach) 
+Verbal representation2 
+Analogical locutions include: 
+• 'be like", properly conjugated (as above), 
+"likewise", "simi arly", or 
+"x is the equivalent of y", "x is the y of z" 
+For example: 
+• 'Writing about mUSic is like dancing about 
+architecture—it's a really stupid thing to want 
+to do." (Elvis Costello) 
+Visual analogies 
+Some visual analogies concern static spatial 
+relat'onships 
+• E.g., 
+Visual analogies2 
+Visua analogies can a so involve dynamic 
+(changing) relationships 
+. E.g., Duncker's (1926) tumorifortress problem 
+Emotional analogies 
+Analogies can capture an emot.onal experience 
+E.g., someone "letting Off steam" 
+Analogies can induce an emotional experience 
+. E.g. David Wolf being eftat Mir 
+Computational power 
+Analogies are typically specific 
+They link two specific situations 
+If analogies are information-poor, then can 
+they be reliable? 
+Mil : "no" 
+• MT: "somewhat" 
+Analogy evaluation involves more than just 
+similarity 
+Analogy construction 
+Often begins With an impasse (missing information) 
+possibe so utions inc ude 
+Being given a source analog, or 
+Locating and retrieving one trom memory 
+Retrieval is affected by similarity 
+• E.g., Copernicus's EartNshipanaIogy 
+Construction (cont.) 
+On the MT, resemblance does not much affect 
+ana ogy evaluation 
+When aligning ana ogs, structural consistency 
+(systematicity) is paramount 
+. Often involves copy with substitution 
+. Results 'n a candidate inference 
+The candidate inference may require 
+adaptation 
+• E.g., CHEF'S Stir-fry recipes 
+Explanation 
+Analogies may be used to explain, e.g., 
+. Copernicus's Earth/ship analogy 
+. Darwin's analogy between human and animal 
+popu ation growth 
+Explanation2 
+Consider the "other-minds problem 
+. HOW do you know that Other people have minds like 
+yours? 
+. Abduction: 
+X has a mind X Eehaves intelligently 
+You intelligently 
+you probably have a mind 
+• An analogical abduction: My mind causes my 
+behaviour. You behave similarly, so you have a 
+simllar mind that causes your behaviour 
+Do you explain other people's behaviour 
+ana og'ca ly? When is this practice convincing? 
+Learning 
+People may learn analogically 
+E.g., writing an essay Napoleon might like writing an 
+essay on Julius Caesar 
+The re-applicat'on of analog'es may lead to schema 
+'nduction 
+E ,g., the problem With a fire-fighter 
+Metaphor 
+Some metaphors are based on analogies 
+(Aristotle) : 
+. E.g., "my job is a jail" 
+In what way is a job a jail? 
+Not all metaphors are analogical 
+E.g., "Ottawa says 
+Analogy processing is voluntary; metaphor 
+processing seems obligatory 
+E.g., "some desks are junkyards" vs. 
+"some desks are roads" 
+Limits: false analogies 
+False analogy: A comparison that misrepresents 
+a situation 
+. E.g. Quebec has the right to secede from Canada, 
+just as Palestine has the right to break away from 
+Israel. 
+Pale 
+Palestirv 
+Isr;el 
+self-&terrnination) 
+x If-deternirxation) 
+rwy - , a) 
+Limits: counteranalogies 
+Counteranalogy: a comparison that 
+contradicts another comparison 
+E.g., miracles and theology (ca. 1700): 
+• God is like a perfect watchmaker (Leibniz) 
+• God is like a model king (Clarke) 
 
 ----------
 
@@ -1139,5 +1784,240 @@ Instead of probability, people employ stereotypes
 
 #### <a id="#7B4c"></a>Analogy
 
+
+Machine generated alternative text:
+Overview 
+Much classic CogSci concerns symbols 
+Another possible mental representation 
+would be images 
+A representation that preserves qualities 
+of perception, e.g., seeing an apple 
+Images correspond to perceptual modalities 
+Difficult questions: 
+What kind of thing is a mental image? 
+Do mental images really participate in cognition? 
+Examine the imagery debate 
+The imagery debate 
+The experience of the "mind's eye" is 
+commonplace 
+People can answer questions using 
+visual mental imagery 
+• E.g., what did you have for breakfast? 
+(Galton, 1822-1911) 
+Aristotle introduced the concept of the faculty of 
+imagination 
+• claimed that all thought involves images 
+The imagery debate2 
+Cr'ticisms of the importance of imagery: 
+Descartes (1569—1650): imagine a chiliagon! 
+Berkeley (1683—1753): an image Of a triangle is 
+a ways of a part'cular kind, e.g., 'sosceles 
+These points ead to skeptic'sm about images 
+as concepts 
+Supporters and skeptics 
+A pictorialist account of visual mental imagery 
+emerged in the 1960s (Kosslyn) 
+Visual mental images the things they 
+Visual mental images can play a 
+role in intelligent thinking. 
+A descriptionist account is supported by critics 
+(pylyshyn) 
+Visual mental images are really descriptions, 
+pro-pogitiong, that contain information 
+about the things they represent, and 
+The phenomenon that we experience as visual 
+mental imagery, i.e., the mind's eye, plays no role 
+substantial role in 
+Quasi-pictorialism 
+How does an image resemble what it 
+represents? 
+'t'ger" does not resemble a tiger 
+Every part of the image corresponds to a part of 
+what the image represents, and 
+Proximity and adjacency relations among parts of 
+an image correspond to the relations among the 
+parts of what the image represents. 
+Mental images are ana ogous to graphical files 
+on a computer 
+JPEG —+ bitmap in a display buffer 
+L TM —9 STM in a visual buffer (but no dsplay!) 
+Evidence: mental rotation 
+Shepard & Metz er (1971) asked subjects if pa.rs 
+of figures were both the same object 
+Result: a linear relationship between rotation 
+angle and decision time 
+Evidence: scanning 
+Kosslyn, Ball & Reiser (1978) asked 
+subjects to memorize a map and 
+answer questions about locations 
+on it 
+Control: consider whole map first 
+Experimental: focus on one location 
+first 
+Result: response time in 
+experimental group was a linear 
+function Of the distance between 
+locations 
+Evidence: zooming and 
+inspection 
+Kosslyn (1975) asked subjects to imagine 
+either 
+a rabbit next to an elephant, or 
+2 a rabbit next to a mouse. 
+Result: When asked if the rabbit had red 
+eyes, subjects were quicker with the 
+larger rabbit (2) 
+Demand characteristic? 
+In these experiments, subjects are instructed to think 
+Visually 
+• Per haps the regultg are due to the gu trying to please the 
+characteristic 
+F'nke and Pinker (1982) asked subjects to say whether an 
+arrow points to a dot 
+Result: response time was a linear function Of the distance 
+between arrow and dot (When they aligned) 
+• Also, more errors c:curred when arrow and dot were close 
+together 
+Neurological evidence: In 
+search of the visual buffer 
+Some fMRl studies suggest VI is 
+connected With visual mental imagery 
+(e.g., Kosslyn et al. 995) 
+Toote et al. (lg82) suggest that 
+monkey VI is retinotopically mapped 
+perhaps VI is (part Of) the Visual buffer 
+However, many fMRl studies do not 
+corroborate this account 
+• E .g , VI Was not active While 
+subjects located a dot within an imagined 
+figure (Knauff et al. 
+Interference 
+Perhaps v'sion and visual mental 'magery can 
+interfere (compete for the same resource) 
+E.g., daydreaming might prevent Visua memory 
+If so, then imagery and perception share the 
+visual buffer 
+Segal and Fusella (1970) showed that imagery 
+could interfere with same-modality perception 
+Pylyshyn argues that both tasks demand 
+application of similar concepts, eading to 
+confusion 
+Overview 
+Main issues in the imagery debate: 
+What kind of thing is a mental image? 
+Do mental images really participate in cognition? 
+Pictorialist versus descriptionist answers 
+Philosophical question: Is imagery too tied to 
+perception to represent general knowledge? 
+E.g., "triangularity" 
+Review the case for descriptionism 
+Examine array theory of imagery 
+Descriptionism 
+Defenses of descriptionism are often attacks 
+on pictorialism (e.g., Dennett) 
+Infinite regress 
+For an image to be a representation, it must be perceived 
+This requirement leads to an infinite regress of perceivers 
+• Pictorialism is a conceptual muddle 
+This argument conflates two issues: 
+A representation is something manipulated by procedures 
+Images and symbols are in the same position here 
+Intentionality: the aboutness of representations 
+This problem applies to any representation 
+There is nothing muddled about preserving perceptual information 
+instead of eliminating it 
+Hedging 
+Pictorialists hedge the concept of 
+image until it means nothing 
+What is a quasi-image but a weasel 
+Perhaps pictorialism is unscientific 
+Why wou d image be a comp ex 
+concept? 
+The phenomenon is complex 
+Available methods Of inquiry are not 
+adequate 
+Absent features 
+Imagery Often omits details 
+• An a tiger versus a picture 
+• A description might just gay 
+"numerous 
+An image is just a description 
+Reply: 
+• A sketch is pictoria whilo omitting details 
+• may be represented separately, e.g., shape and texture 
+Counterargument: Unlike descriptions, images have 
+obligatory features, e.g., posture 
+What are some obligatory features of images? 
+Imagery is interpreted 
+people have trouble reinterpreting ambiguous 
+figures, e.g. Wittgenstein's duck/rabbit 
+Memorization and mental rotation of figures 
+(Slezak 1995). 
+Descriptionist view: images are just symbolic 
+interpretations of perceptions 
+Imagery is interpreted2 
+Pictorialist reply: 
+can sometimes perform 
+tasks 
+• Kossvn (1994): image parts fade quickly 
+from the visual buffer unless we attend to 
+Teal and Kolbet (i SBS): interpretation 
+tends to attention to central features 
+Chambers: When We generalg a mental 
+image, we attend to central features and 
+Others fade, reinterpretation 
+Which features are central to the duck 
+or rabbit interpretation of 
+Wittgenstein's figure? 
+Computational equivalence 
+Anderson (1978) shows that pictorialism 
+is behav ourally equivalent to 
+descriptionism 
+Can evidence ever be conclusive in the 
+debate? 
+Perhaps pictor' alism is simpler 
+2. Pictoria 'sm also involves cla'ms about the 
+brain, e.g., the visual buffer 
+Representational power 
+Array theory (Glasgow and Papadias 1992): 
+Deep, spatia , and v'sual representat'ons 
+Deep representation: a frame, e.g., 
+Frame: Map-of-Europe 
+t. a-kind-ot map-of-continent 
+2. pans: Sweden (0.4), entain (1,0), . 
+3 . procedures: find , . 
+Spatial array 
+An array capturing adjacency re ationships 
+Permits visual solutions to problems 
+E.g., is Sweden north Of Germany? 
+Spatial array2 
+Contrast with a rule-based model: 
+IF and THEN 
+Germany) 
+north Sweden , Denm ark) 
+Arrays can also be 3D 
+represent the physical Structure Of chemic. 
+Possible alternative: graphs 
+Visual arrays 
+An occupancy array approximates the shape of an object 
+• dependent 
+Supports procedures likes zoom, rotate, tranglatg 
+Neurological evidence? 
+arrays imitate the -what. system 
+arrays imitate system 
+Representational limitations 
+Visual mental imagery lacks generality 
+Portugal 's Other north Or south Of France. 
+There 's no duck On the table. 
+Imagery cannot unambiguously represent 
+these situations 
+Computational power 
+Scientific dlscovery, e.g. 
+Continenta drift (Wegener 1920) 
+. Special relativity (Einstein 1905) 
+Computational power2 
+Technological innovation, e.g. 
+. Nikola Tesla (1856-1943) 
+Temp e Grandin 
 
 ----------
