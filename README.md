@@ -1101,7 +1101,7 @@ is is English")
 ### <a id="#5A3"></a>Theories of Concepts
 
 - The classical view: concept _X_ is the **definition** of _X_, the set of jointly necessary and sufficient conditions that must be had to be an _X_
-    - Necessary: properties all _X_s must have 
+    - Necessary: properties all _X_ must have 
     - Sufficient: anything With all the necessary properties is an _X_ 
 - E.g., bachelor: an unmarried man 
 - Strengths of the classica theory: 
@@ -1134,7 +1134,7 @@ is is English")
 |:---------:|:-----------------:|:------:|:---------------:|
 |  **Wood** |  Small-wood-spoon |        |  Big-wood-spoon |
 |           |   &uarr; &darr;   |        |                 |
-| **Metal** | Small-metal-spoon | &darr; | Big-metal-spoon |
+| **Metal** | Small-metal-spoon | &harr; | Big-metal-spoon |
 
 #### <a id="#5A3c"></a>Exemplars
 
