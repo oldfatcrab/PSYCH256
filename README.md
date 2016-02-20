@@ -838,306 +838,237 @@ is is English")
 
 ### <a id="#4A1"></a>Overview
 
+- Rule: an IF... THEN... structure modeled on implication (&sup;), e.g. 
+    - IF a king is in check AND no move can remove it from check THEN the checking player wins. 
+- Basic idea:
+    - Preserve the representational power of logic 
+    - Extend and generalize it as needed 
+- Adaptations include: 
+    - Different **meaning** for IF... THEN... structures 
+    - Define and apply **search strategies** for rule use 
 
 ### <a id="#4A2"></a>History of Rules
 
+- Logic Theorist (LT) developed by Newell & Simon (1950s) 
+    - Imitate theorem-proving methods of students 
+    - Used **backward chaining** and **subgoaling**
+- Generalized Problem Solver (GPS) developed in the 1960s 
+    - Solve any sort of problem 
+    - Used **means-ends analysis** and **difference lists**
+- Limitations of GPS include: 
+    - Certain problems, e.g., chess, were beyond its capabilities 
+    - Could not learn from experience 
+- Modern systems address limitations of GPS, e.g., 
+    - ACT-R (Anderson) 
+    - SOAR (Newell, Laird, Rosenbloom) 
+- Expert systems, e.g., MYCIN, also 
 
 ### <a id="#4A3"></a>Rules-Based Systems
 
+- Three components: 
+    1. representation of **goal** and **initial condition**, 
+    2. a database ot **rules**, and 
+    3. a **strategy** or algorithm for applying the rules 
+- Initial condition of Towers ot Hanoi problem: 
+    - Peg 1 contains a, b, and c trom top to bottom 
+    - Peg 2 is empty 
+    - peg 3 is empty 
+    - Disc a < disc b, disc b < disc c 
+- Goal: peg 3 contains discs a, b, and c from top to bottom 
+- Knowledge 
+    - The rule database represents the knowledge of the system, e.g., the _Towers of Hanoi problem_.
+        1. IF disc _x_ is on top of peg _i_ and peg _j_ is empty THEN move disc _x_ on top of peg _j_
+        2. IF disc _x_ is on top of peg _i_ and disc _y_ is on of peg _j_ and _x_ < _y_ THEN move disc _x_ on top of peg _j_
+    - Perhaps one rue would do, e.g., 
+        3. IF peg 1 contains discs a, b and c from top to bottom THEN move a to 3, b to 2, a to 2, c to 3, a to 1, b to 2, a to 3 
+    - Often, we are not so fortunate 
+    - Rules may be **combined** to arrive at a plan 
+        1. IF disc a is on top of peg 1 and 3 is empty THEN move a to 3 
+        2. IF disc a is on top of peg 1 and 2 is empty THEN move b to 2 
+        3. IF disc a is on top of peg 3 and disc b is on top of peg 2 and a < b THEN move a to 2
+        4. IF disc c is on top of peg 1 and 3 is empty THEN move c to 3 
+        5. IF disc b is on top of peg 2 and 1 is empty THEN move a to 1 
+        6. IF disc b is on top of peg 2 and disc c is on top of peg 3 and b < c THEN move a to 3
+        7. IF disc a is on top of peg 2 and disc b is on top of peg 3 and a < b THEN move a to 3
+    - Rules are a so known as **productions** and rule-based systems as **production systems**
+    - Discussion questions 
+        - In what situations to you apply rules? DO you apply Other kind Of knowledge then as well?
+        - What sorts of knowledge are difficult to capture in terms of rules? 
 
 ### <a id="#4A4"></a>Search
 
+- Determining which rules to combine and how is accomplished by **search** 
+- Search is guided by **search strategies** 
+    - May be systematic, random, etc. 
+- Search through a database of rules is a knowledge search 
 
 #### <a id="#4A4a"></a>Knowledge Space
 
+- In a physical search, 
+    - Search occurs in a specified area 
+    - Begins in an initial location 
+    - Visits neighbouring locations until the goal is found 
+- In a knowledge search 
+    - Search occurs in a knowledge space 
+    - Begins with an initial condition 
+    - Visits neighbour'ng condit'ons until a goal condition is found 
+- Case: tic-tac-toe 
+    - Initial condition: blank board 
+    - Neighbouring conditions: next move 
+    - Goal state: a win 
 
 #### <a id="#4A4b"></a>Search Strategies
 
+- **Forward strategy**: compare current situation with IF conditiom on a match, apply THEN action 
+    - Analogous to modus ponens 
+- **Backward strategy**: compare goal state to actions; on a match, adopt the IF condition as a subgoal 
+    - Analogous to affirming the consequent 
+    - UsedbyLT and GPS 
+- **Bidirectional strategy**: forward or backward 
 
 #### <a id="#4A4c"></a>Heuristics
 
+- Any strategy can be conducted in several ways (heuristics) 
+- **Depth-first** search: apply the first rule that matches 
+    - Like traveling 'deep' into the knowlec$e space 
+- **Breadth-first** search: apply every rule that matches 
+    - Like traveling across the space 
+- **Best-first** search: rank every rule that applies, attempt the best one first 
+    - The ranking function is called the heuristic function 
+    - Used by GPS 
 
 #### <a id="#4A4d"></a>Which Strategy to Use
 
+- Depends on the distribution of goals 
+- Tic-tac-toe: fordard, best-first 
+    - Space small, goals plentiful
+    - Rules can be searched in predetermined order 
+        1. Win: IF a blank is flanked by two of my pieces THEN play it 
+        2. Block: IF a blank is flanked by two my opponent's pieces THEN play it 
+        3. Center: IF the center blank THEN play it 
+        4. Cornet: IF a corner is empty THEN play it 
+        5. Other: IF a Square is empty THEN it 
+- Chess: space large, goals sparse 
+    - Opening: use "gambits", forward, breadth-first 
+    - Midgame: adopt strong positions as subgoals, backward 
+    - Endgame: wins available, backward, depth-first 
+- Strategies vary with expertise 
+    - Experts can employ best-first, novices depth-first 
 
 ## <a id="#4B"></a>Evaluation of Rules
 
-
 ### <a id="#4B1"></a>Overview
 
+- Main elements of rule-based systems: 
+    - Database of rules 
+    - Strategy for searching knowledge space 
+- Discussed problem solving 
+- Evaluation issues include: 
+    - Are rules mental representations? 
+    - Is search a mental procedure? 
 
 ### <a id="#4B2"></a>Representational Power
 
+- Logic is highly specialized 
+- Rules are more flexible, e.g., 
+    - (&forall;)(B<sup>x</sup> &sup; F<sub>x</sup>) "All birds fly."
+    - IF x is a bird THEN x flies. "Usually..." 
+- In logic, exceptions are disastrous, e.g., 
+    1. (&forall;)(B<sup>x</sup> &sup; F<sub>x</sup>) "All birds fly."
+    2. (&forall;)(P<sup>x</sup> &sup; B<sub>x</sup>) "All penguins are birds."
+    3. (&forall;)(P<sup>x</sup> &sup; ~F<sub>x</sup>) "No penguins fly."
+    4. P<sup>p</sup> "Pete is a penguin"
+- Valid arguments would admit contradictions, e.g., 
+    - P<sup>p</sup>
+    - (&forall;)(P<sup>x</sup> &sup; B<sub>x</sup>)
+    - (&forall;)(B<sup>x</sup> &sup; F<sub>x</sup>)
+    - -->
+    - F<sup>p</sup>
+- or:
+    - (&forall;)(P<sup>x</sup> &sup; ~F<sub>x</sup>)
+    - P<sup>p</sup>
+    - -->
+    - ~F<sup>p</sup>
+- Consider similar rules: 
+    1. penguin(Pete)
+    2. IF penguin(x) THEN bird(x)
+    3. IF bird(x) THEN fly(x)
+    4. IF penguin(x) THEN not-fly(x)
+- The system could **retract** 1,2,3 upon 1,4
+- Exceptions are acceptable because the system is not absolutely committed to its conclusions 
+- Rule are interpreted as **defaults**
+- Rule systems are non-monotonic 
+    - They are not engaged in deduction 
+- On this view, deduction has little/no role in cognition 
 
 ### <a id="#4B3"></a>Computational Power
 
 
 #### <a id="#4B3a"></a>Explanation
 
+- Forward chairing (like deduction) 
+    - IF Psych-101 fills up quickly THEN it has a popular professor
+- Backward chaining (like abduction) 
+    - IF Psych-101 has a popular professor THEN it up quickly. 
+- For the best explanation, attach a likelihood to each rule 
+    - Difficult to anticipate 
+- Explanations could be generated by a **rule trace**
+- IF a patient has some set Of symptoms THEN he has appendicitis 
+- The system can only say that it applied a given rule, not why the rule is appropriate 
 
 #### <a id="#4B3b"></a>Learning
 
+1. **Inductive generalization**: use constant conjunctions to acquire rules 
+    - After several instances, conclude IF a class has a popular professor THEN it fills up 
+    - Can lead to inconsistent rules 
+2. **Chunking** (composition):
+    - The first string is harder to recall than the second one: 
+        1. "r p l b v q m s d g" 
+        2. "I am the very model of a modern major-general" 
+    - condense rules together. e.g., IF you travel Hwy-7, Hwy-86, University-Ave THEN you reach UW
+3. **Specialization**: acquire rules for exceptions, e.g., 
+    - IF you travel Hwy-7, HWY-85, University-Ave AND it'S rush hour THEN you reach UW 
 
 #### <a id="#4B3c"></a>Language
 
+- Associative theories (pre-Chomsky) 
+- Generative theories (Chomsky) 
+- Apply rules to assign syntactic structure: 
+    - S --> NP VP
+    - NP --> dogs, cats, cows, grass 
+    - VP --> NP 
+    - V --> chase, eat, admire 
+- Pinker: some conjugations learned "associatively", e.g., past tense of "sing" and "ring" 
 
 ### <a id="#4B4"></a>Computational Limitations
 
+- Do expert systems scale up? 
+    - Can specialized knowledge simply be combined to simulate general inte ligence? 
+- The **scaling problem**: adding more rules becomes ineffective 
+    - Conflicts among rules increase 
+    - Thrashing: managing conflicts dominates search effort 
 
 ### <a id="#4B5"></a>Psychological Plausibility
 
+- Rules do well simulating expert performance 
+    - Domain-specific 
+    - Automatic and quick 
+    - Acquired through training 
+- Novice performance 
+    - Domain-general 
+    - Tentative and slower 
+    - Requires more effort 
+- **Power law** of practice 
+- Have you observed the power law in effect? 
 
 ### <a id="#4B6"></a>Philosophical Issues
 
-
-Overview 
-Rule: an IF..THEN... structure modeled on 
-implication (3), e.g. 
-IF a king is in check AND no move can remove it from 
-check THEN the checking player wins. 
-Basic idea. 
-Preserve the representational power of logic 
-• Extend and generalize it as needed 
-Adaptations include: 
-• Different meaning for IF... THEN structures 
-• Define and apply search strategies for rule use 
-History of rules 
-Logic Theorist (L T) developed by Newell & 
-Simon (1950s) 
-• Imitate theorem-proving methods of students 
-. Used backward chaining and subgoaling 
-Generalized Problem Solver (GPS) 
-developed in the 1960s 
-• Solve any sort of problem 
-Used means-ends analysis 
-and difference lists 
-History2 
-Limitations of GPS include: 
-• Certain problems, e.g., chess, were beyond 
-'ts capabilities 
-Cou d not learn from experience 
-Modern systems address limitations of 
-GPS, e.g., 
-• ACT-R (Anderson) 
-• SOAR (Newe l, Laird, Rosenbloom) 
-Expert systems, e.g., MYCIN, also 
-Rule-based systems 
-Three components: 
-representation of goal and initial condition, 
-a database ot rules, and 
-a strategy or algorithm for applying the ru es 
-Initial condition of Towers ot Hanoi problem: 
-Peg contains a, b, and c trom top to enottom 
-Peg 2 is empty 
-peg 3 is ernpty 
-Disc a «discb disc disc c 
-Goal: peg 3 contains discs a, b, and c from top to 
-bottom 
-Knowledge 
-The ru e database represents the knowledge of 
-the system, e.g., the Towers of Hanoi problem. 
-IF disc x is on top of peg i and peg j is empty THEN 
-move dsc x on top of peg j 
-IF disc x is on top of peg i and disc y is on of peg 
-j and x y THEN mcwe disc x on top of peg j 
-Perhaps one rue would do, e.g., 
-IF peg I contains discs a, b and c from top to 
-bottom THEN move a to 3, b to 2, a to 2, c to 3, a to 
-1, bt02, at03 
-Often, we are not so fortunate 
-Knowledge2 
-Rules may be combined to arrive at a plan 
-Ill. 
-VIL 
-F disc a is on top Of peg 1 and 3 is empty THEN a to 3 
-F disc b is on top peg 1 2 is empty THEN b to 
-disc a s on top peg 3 and die b is on 01 peg 2 and a b 
-THEN move a to 
-disc c is on top Of peg 1 and peg 3 is THEN move c to 3 
-F son 
-top of 2 d —g 
-THEN 
-IF b is top of "g 2 dix c 
-top ot —g b c 
-THEN b to 3 
-top of "g 2 dix b is of peg 3 a b 
-THEN 
-Rules are a so known as productions and rule-based 
-systems as production systems 
-Discussion questions 
-In what situations to you apply rules? DO 
-you apply Other kind Of knowledge then as 
-What sorts of knowledge are difficult to 
-capture in terms of rules? 
-Search 
-Determining which rules to combine and 
-how is accomplished by search 
-Search is guided by search strategies 
-• May be systematic, random, etc. 
-Search through a database of rules is a 
-knowledge search 
-Knowledge space 
-In a physical search, 
-. Search occurs in a specified area 
-Begins in an initial locat'on 
-. Visits neighbouring locations unt'l the goal is found 
-In a knowledge search 
-. Search occurs in a knowledge space 
-Begins with an initial condition 
-. Visits neighbour'ng condit'ons until a goal condit'on is 
-found 
-Case: tic-tac-toe 
-Initial condition: blank board 
-Neighbouring conditions: next move 
-Goal state: a win 
-Search strategies 
-Forward strategy: compare current situation 
-with IF conditiom on a match, apply THEN action 
-. Analogous to modus ponens 
-Backward strategy: compare goal state to 
-actions; on a match, adopt the IF condition as a 
-subgoal 
-. Analogous to affirming the consequent 
-• UsedbyLT and GPS 
-Bidirectional strategy: forward or backward 
-Heuristics 
-Any strategy can be conducted in several ways 
-(heuristics) 
-Depth-first search: apply the first rule that matches 
-• Like traveling 'deep' into the knowlec$e space 
-Breadth-first search: apply every rule that matches 
-• Like traveling across the space 
-Heuristics2 
-Best-first search: rank every rule that applies, 
-attempt the best one first 
-. The ranking function is called the heuristic function 
-Used by GPS 
-Strategy selection 
-Depends on the distribution of goals 
-Tic-tac-toe: f0Ndard, best-first 
-Space small, goals p entifu 
-Rules can be searched in predetermined order 
-Wim IF a blat' s flanked by two of my pieces THEN ciay it 
-Block F a blank is flanked by two my opponent's pieces 
-THEN play it 
-3. Center; IF the center blank THEN play it 
-4. Cornet: IF a corner ig empty THEN play it 
-5. IF a Square is empty THEN it 
-Selection2 
-Chess: space large, goals sparse 
-• Opening: use "gambits", forward, breadth-first 
-• Midgame: adopt strong positions as subgoals, 
-backward 
-• Endgame: wins available, backward, depth- 
-first 
-Strategies vary with expertise 
-• Experts can employ best-first, novices depth- 
-first 
-Overview 
-Main elements of rule-based systems: 
-• Database of rules 
-• Strategy for searching knowledge space 
-Discussed problem solving 
-Evaluation issues include: 
-• Are rules mental representations? 
-• Is search a mental procedure? 
-Representational power 
-Logic is highly specialized 
-Rules are more flexible, e.g., 
-"All birds fly. 
-IF x is a bird THEN x flies. "Usually..." 
-In logic, exceptions are disastrous, e.g., 
-2 
-a, 
-pp 
-Representation2 
-'All birds fly" 
-'All penguins are birds" 
-'No penguins fly" 
-'Pete is a penguin" 
-Valid arguments would admit contradictions, e.g., 
-Consider simi ar rules: 
-IF THEN bird(x) 
-IF bird(x) THEN tiy(x) 
-IF penguin(x) THEN not.fly(x) 
-The system could retract I upon I ,4 
-Representation3 
-Exceptions are acceptable because the 
-system is not absolutely committed to its 
-conclusions 
-Rule are interpreted as defaults 
-Rule systems are non-monotonic 
-• They are not engaged in deduction 
-On this view, deduction has little/no role in 
-cognition 
-Explanation 
-Forward chairing (like deduction) 
-IF Psych-101 fills up quickly THEN it has a 
-Backward chaining (like abduction) 
-IF Psych- 101 has a popular p.ofessor THEN it up quvckty. 
-For the best exp anation, attach a likelihood to each rule 
-to anticipate 
-Explanations could be generated by a rule trace 
-. IF a patient has some set Of symptoms THEN he has 
-appendicitis 
-. The system can only say that it applied a given rule, 
-not why the ru e is appropriate 
-Learning 
-Inductive generalization: use constant conjunctions to 
-acquire rules 
-After several instances, conclude IF a class has a popular 
-professor THEN it fills up 
-Can lead to inconsistent rules 
-Chunking (compos'tion). 
-The first string is harder to recall than the second one: 
-I. .rp,'bvqmsdl 
-2. am the ve'y mode/ ot a modern nwor-generat' 
-condense rules together. e.g., F you travel Hwy-7, Hwy86, 
-University Ave THEN you reach UW 
-Specialization: acquire rules for exceptions, e.g., 
-IF pu travel Hwy-7, HWY-BE, University-Ave AND it'S rush 
-hour THEN you reach UW 
-Language 
-Associative theories (pre-Chomsky) 
-Generative theories (Chomsky) 
-Apply rules to assign syntactic structure: 
-NP dogs. cats, cows, grass 
-vp V NP 
-V chase, eat. admire 
-Pinker: some conjugations learned associatively, 
-e.g., past tense of "sing" and "ring" 
-Computational limitations 
-Do expert systems scale up? 
-• Can specialized knowledge simply be 
-combined to simulate general inte ligence? 
-The scaling problem: adding more rules 
-becomes ineffective 
-• Conflicts among rules increase 
-• Thrashing: managing conflicts dom'nates 
-search effort 
-Psychological plausibility 
-Rules do well simulating expert performance 
-• Domain-specific 
-• Automatic and quick 
-Acquired through training 
-Novice performance 
-• Domain-general 
-• Tentative and slower 
-• Requires more effort 
-Power law of practice 
-Have you observed the power law in effect? 
-Philosophical issues 
-Newell: combining chunks of knowledge 
-(rules) is central to intelligence 
-• An expression the classical CogSci view 
-Frame problem (Minsky): 
-Intelligent beings need to distinguish relevant from 
-irrelevant knowledge 
-However, adding more rules to capture this 
-need may become counterproductive 
-What solutions might there be? 
-2 
-3. 
+- Newell: combining chunks of knowledge (rules) is central to intelligence 
+    - An expression the classical CogSci view 
+- **Frame problem** (Minsky): 
+    - Intelligent beings need to distinguish relevant from irrelevant knowledge 
+    - However, adding more rules to capture this need may become counterproductive 
+- What solutions might there be? 
 
 ----------
 
@@ -1149,24 +1080,92 @@ What solutions might there be?
 
 ### <a id="#5A1"></a>Overview
 
+- Concept: a chunk of more-or-less general knowledge 
+    - An idea or general description 
+- Functions of concepts include: 
+    - Categorization, e.g., the good (Socrates) 
+    - Configuration of experience, e.g., words (Kant) 
+    - Foundation of inductive inferences, e.g., a growling dog (Smith) 
 
 ### <a id="#5A2"></a>History of Concepts
 
+- Epistemology: 
+    - How well do concepts allow us to categorize things e.g., justice? 
+    - Do concepts present a sensible picture of reality? (Is the concept human that of a featherless bped?) 
+- Psychology: What are concepts? 
+    - Propositions (Hobbes), images (Aristotle), abstractions (Locke), words (Wittgenstein), frames (Minsky), or distributed representations (Hebb)? 
+- Learning: how are concepts acquired? 
+    - Through experience, e.g., red (Locke) 
+    - Innate (built-in), e.g., physics (Piaget) 
 
 ### <a id="#5A3"></a>Theories of Concepts
 
+- The classical view: concept _X_ is the **definition** of _X_, the set of jointly necessary and sufficient conditions that must be had to be an _X_
+    - Necessary: properties all _X_s must have 
+    - Sufficient: anything With all the necessary properties is an _X_ 
+- E.g., bachelor: an unmarried man 
+- Strengths of the classica theory: 
+    - Applies well to technical (nominal) like bachelor, triangle, contract 
 
 #### <a id="#5A3a"></a>Definitions
 
+- Limitations: natural kinds 
+    - Centra properties seem dispensable, e.g., tiger 
+    - Typicality effects, e.g., bird 
+- Exercise (pairs): One person define _fruit_, the Other vegetable (30 seconds) 
 
 #### <a id="#5A3b"></a>Prototypes
 
+- **Prototypes**: list of typical or standard features (Rosch 1970) 
+    - Not all features are necessary 
+    - "family resemblance" (Wittgenstein) 
+- Exercise: write down the typical features of a _game_ (30 seconds) 
+- The typicality of instance I to prototype P is computed by a score of similarity (Tversky's contrast rule): 
+    - Sim(I, P) = a&bull;f(I &amp; P) - b&bull;f(P - I) - c&bull;f(I - P)
+- Strengths of the theory include: 
+    - Explains Wpicallty effects, e.g., robin vs. penguin 
+    - Applies to other concepts types, e.g., artifacts, psychological and psychiatric terms 
+- Limitations of the theory inc ude: 
+    - Technical coru:epts exhbit typicality but not fuzziness 
+    - Features do not weigh independently 
+    - People do not discard information about class size or variability (e.g., exemplars)
+
+|           |       Small       |        |       Big       |
+|:---------:|:-----------------:|:------:|:---------------:|
+|  **Wood** |  Small-wood-spoon |        |  Big-wood-spoon |
+|           |   &uarr; &darr;   |        |                 |
+| **Metal** | Small-metal-spoon | &darr; | Big-metal-spoon |
 
 #### <a id="#5A3c"></a>Exemplars
 
+- **Exemplar**: a good instance Of a concept 
+    - A _robin is a good bird_
+- Classification is a score computed by 
+    - Comparison with exemplars, or 
+    - Construction of a prototype from exemplars 
+- Classification is done "on the fly 
+    - E.g., _Arts professor_
+- Strengths of the exemplar theory:
+    - Preserves typicality judgements 
+    - Explains how people have access to class size and variability 
+        - Which class is larger or more diverse, _vegetable_ or _spoon_?
+    - Accounts for dependence Of features 
+- Limitations Of the exemplar theory:
+    - How are exemplars affected by learning general facts? 
+    - Exemplars do not explain the existence of general categories 
 
 #### <a id="#5A3d"></a>Causal
 
+- **Causal theory**: _X_ is a _C_ if x obeys theories that apply to _C_ 
+    - E.g., tomatoes as entrees 
+- Explains natural/artifactual difference, e.g. 
+    - A _broom_ can become a _hockey stick_
+    - A _goose_ cannot become a _swan_
+- Explains **centrality** of some features 
+    - Straight banana more typical than straight boomerang 
+- Limitations:
+    - Some causal theories have no effect, e.g., unicorn 
+    - Method may depend upon context, e.g., quick and dirty method 
 
 ### <a id="#5A4"></a>Tomato - Fruit or Vegetable?
 
@@ -1176,238 +1175,119 @@ What solutions might there be?
 
 ### <a id="#5B1"></a>Overview
 
+- Exemplar and causal theories most promising 
+- Examine **frames** (Minsky, 1974) 
+    - Slots and fillers 
+- Review procedures on frames: 
+    - Inheritance 
+    - Matching 
+- Psychological plausibility 
 
 ### <a id="#5B2"></a>Representational Power
 
+- Frames 
+    - Minsky was concerned about the **relevance** (frame) problem in logic and rules 
+    - Rules do not tell us what **not** to do 
+    - Proposal: collect relevant information together into **frames**, a list of slots and various fillers 
+        - Also called schemas 
+    - Frames can be a computational representation of concepts 
+    - See the following example frame and script
+    - Suitable for stereotyped situations 
+        - Automatism: Hilbert and the go-to-bed script
+    - Rules would lose relevance structure: 
+        - IF you dine out THEN you get to the location
+        - IF you get to the location THEN you enter and be seated
+    - _a-kind-of_ and _subtype slots_
+        - capture **hierarchical** organization of concepts 
+    - Exercise: represent some 
+        - concept as a frame 
+- The _course_ frame 
+    - Frame: course 
+        1. A kind of: educational process (sequence of events)
+        2. Subtypes: lecture*, seminar, lab, correspsndence 
+        3. Instructor: ___
+        4. Room: ___
+        5. Meeting: ___
+        6. Evaluation: exams*, quizzes, essays, ...
+        7. Examples: Phil 256, Psych 101, ...
+        8. Relations: 2 affects 4,5,6
+- The _dine out_ script 
+    - Frame: dine out 
+        1. A kind Of: dining event 
+        2. Subtypes: sit-down*, take-out, fancy-sit-down 
+        3. Location: 
+        4. Time: 
+            1. Get to location 
+            2. Enter and be seated 
+            3. peruse menu 
+            4. Order food 
+            5. Eat tcn»d 
+            6. Obtain and pay chequæ 
+        6. Examples: Burger King, Kooh-I-Noor, Mongolian Gri I 
+        7. Relations: 2 affects 5 
 
 ### <a id="#5B3"></a>Computational Power
 
+- Newell: knowledge search is the most basic ability Of an intelligent mind 
+- Matching is fundamental to concepts: 
+    - Any process that relies on similarity to associate chunks of knowledge 
+- Concepts also involve inheritance:
+    - Information inherent in the configuration of knowledge 
 
 #### <a id="#5B3a"></a>Inheritance
 
+- Concepts inherit information through hierarchical organization 
+    - Dogs have fur because a dog is a mammal 
+- Similar to rules (forward usage) 
+    - IF _x_ is a mammal THEN _x_ has fur
+    - IF _x_ is a dog THEN _x_ is a mammal
+- Slots may encode **defaults**, e.g., 
+    - _Dog: Boppy ears_
+    - _Penguin: webbed feet_
+- Exceptions can be explicitly noted:
+    - (Mexican hairless) Pans: not-has-tur 
+    - (Peruin) Abilities: not-fly 
+- Imagine following a link vs. searching Google 
 
 #### <a id="#5B3b"></a>Matching
 
+- Which concept best fits the current situation? 
+- Realized by competition for activation 
+    - Contrained by excitatory and inhibitory links
+    - Concludes when activation pattern ceases to change 
+    - E.g., deciding ona child's name 
+- Exploits content organization of mernory 
+    - a-kind-of 
+    - a-part-of
+    - examples 
 
 ### <a id="#5B4"></a>Psychological Plausibility
 
 
 #### <a id="#5B4a"></a>Planning
 
+- Scripts can support planning 
+    - E.g., howiwhen to do assignments 
+    - Scripts can be inflexible (e.g., a hockey game?) 
 
 #### <a id="#5B4b"></a>Explanation
 
+- Frames a so support explanations 
+    - Why is there money on a restaurant table? 
+    - Why is a Camero in the ditch? (overgeneralize) 
+    - Why is there a goat in the restaurant? (inflexible) 
 
 #### <a id="#5B4c"></a>Learning
 
-
-Overview 
-Concept: a chunk of more-or-less general 
-knowledge 
-• An idea or general description 
-Functions of concepts include: 
-• Categorization, e.g., the good (Socrates) 
-• Configuration of experience, e.g., words 
-(Kant) 
-• Foundation of inductive inferences, e.g., a 
-growling dog (Smith) 
-History of concepts 
-Epistemology: 
-• How well do concepts allow us to categorize 
-things e.g., justice? 
-• Do concepts present a sensible picture of reality? 
-(Is the concept human that of a featherless 
-bped?) 
-Psychology: What are concepts? 
-Propositions (Hobbes), images (Aristotle), 
-abstractions (Locke), words (Wittgenstein), frames 
-(Minsky), or distributed representations (Hebb)? 
-Learning: how are concepts acquired? 
-• Through experience, e.g., red (Locke) 
-• Innate (built-in), e.g., physics (Piaget) 
-Theories of concepts 
-The class'ca view: concept X is the definition of 
-X, the set of jointly necessary and sufficient 
-conditions that must be had to be an X 
-. Necessary: properties all Xs must have 
-. Sufficient: anything With all the necessary properties 
-is an X 
-E.g., bachelor: an unmarried man 
-Strengths of the class'ca theory: 
-. Applies well to technical (nominal) like 
-bachelor, triangle, contract 
-Definitions 
-Limitations: natural kinds 
-. Centra properties seem 
-dispensable, e.g., tiger 
-. Typ'cality effects, e.g., bird 
-Exercise (pairs): One person define fruit, the 
-Other vegetable (30 seconds) 
-Prototypes 
-Prototypes: list of typical or standard features 
-(Rosch 1970) 
-Not all features are necessary 
-"family resemblance" (Wittgenstein) 
-Exercise: write down the typical features of a 
-game (30 seconds) 
-The typ'ca 'ty of instance I to prototype P is 
-computed by a score of similarity (Tversky's 
-contrast rule): 
-a.f( 'P) - b.f(P-l) - c.f(l-P) 
-Prototypes2 
-Strengths of the theory include: 
-• Explains Wpicallty effects, e.g., robin vs. penguin 
-• Applies to other concepts types, e.g., artifacts, psychological 
-and psychiatric terms 
-Limitations of the theory inc ude: 
-• Technical coru:epts exhbit typicaliW 
-but not fuzziness 
-• Features do not weigh independently 
-Metal Big- 
-smal 
-• People do not discard information about class size or 
-variability (e.g., 
-Exemplars 
-Exemplar: a good instance Of a concept 
-• A robin is a good bird 
-Classification is a score computed by 
-• Comparison with exemplars, or 
-• Construction of a prototype from exemplars 
-Classification is done "on the fly 
-• E.g., Arts professor 
-Exemplars2 
-Strengths of the exemplar theory. 
-Preserves typicality judgements 
-. Explains how people have access to class s'ze and 
-variability 
-Which c ig or more diverse, or spoonQ 
-. Accounts for dependence Of features 
-Limitations Of the exemplar theory: 
-. HOW are exemplars affected by learning general 
-facts ? 
-• Exemplars do not explain the existence of general 
-categories 
-Causal theory 
-Causal theory: X is a C if x obeys theories that apply 
-to C 
-• E.g., tomatoes as entrees 
-Explains natural/artifactual difference, e.g. 
-• A broom can become a hockey stick 
-• A goose cannot become a swan 
-Causal theory (cont.) 
-Explains centrality of some features 
-• Straight banana more typical than straight boomerang 
-Limitations. 
-• Some causal theories have no effect, e.g, unicorn 
-• Method may depend upon context, e g. , quick and dirty method 
-Overview 
-Exemplar and causal theories most promising 
-Examine frames (Minsky, 1974) 
-Slots and fillers 
-Review procedures on frames: 
-Inheritance 
-. Matching 
-Psychological plausibility 
-Frames 
-Minsky was concerned about the relevance 
-(frame) problem in logic and rules 
-Rules do not tell us what not to do 
-Proposal: collect relevant information together 
-into frames, a list of slots and various fillers 
-• Also called schemas 
-Frames can be a computational representation 
-of concepts 
-The course frame 
-Frame: course 
-I . A kind of; process of 
-2 Subtypes: lecture, seminar, lab, correspsndence 
-3. Instructor; 
-6. Evaluation; quizzes, essays, 
-7. Examples, 256, psych 101, 
-g. Relations: 2 affects 
-The dine out script 
-Frame: dine out 
-I. A kind Of: dining event 
-2. Subtypes: sit-down', 
-take-out, fancy-sit-down 
-3. Location: 
-4. Time: 
-a. Get to location 
-b. Enter and be seated 
-c. peruse menu 
-d. Order food 
-e. Eat tcn»d 
-t. Obtain and pay chequæ 
-6. Examples: Burger King, 
-Kooh-I-Noor, Mongolian Gri I 
-7. Relations: 2 affects 5 
-Frames (cont.) 
-Suitable for stereotyped s'tuations 
-• Automatism: and the 
-Rues would lose relevance Structure: 
-THEN get to 
-IF you get to THEN —ted 
-a-kind-of and subtype slots 
-capture hierarchical organization 
-Of concepts 
-Exerc'se: represent some 
-concept as a frame 
-Computational power 
-Newell: knowledge search is the most 
-basic ability Of an intelligent mind 
-Matching is fundamental to concepts: 
-Any process that relies on Simi arity to 
-associate chunks Of knowledge 
-Concepts also involve inheritance: 
-Information inherent in the configuration of 
-knowledge 
-Inheritance 
-Concepts 'nherit information through hierarchical 
-organization 
-Dogs have fur a is a mammal 
-Simi ar to rules (forward usage) 
-mal THEN 
-IF x is a dog THEN x is a 
-Slots may encode defaults, e.g., 
-• Dog: Boppy ears 
-• w feet 
-Inheritance (cont.) 
-Exceptions can be explicitly noted. 
-(Mexican hairless) Pans: not-has-tur 
-(Peruin) Abilities: not-fly 
-'k Imagine following a link vs. searching Google 
-Matching 
-Wh'ch concept best fits the current situation? 
-Realized by competition for activat'on 
-• by excitatory and inhibitory 
-• Concludes when activation pattern ceases to change 
-• E.g., deciding ona child's name 
-Exploits content organization of mernory 
-• a-kind-of 
-• a-pan-ot 
-• examples 
-Plausibility 
-Scripts can support planning 
-. E.g., howiwhen to do assignments 
-. Scripts can be inflexible (e.g., a hockey game?) 
-Frames a so support explanations 
-. Why is there money on a restaurant table? 
-Why is a Camero in the ditch? 
-(overgeneralize) 
-. Why is there a goat in the restaurant? 
-(inflex'b e) 
-Learning 
-Definition 
-• zythum 
-Specialization (zythum again) 
-Copy'ng with substitution 
-. Road rage, air rage, boat rage 
-computer rage, parking rage, 
-shoppyng rage 
-Generalization 
-pull a Homer 
-Combination 
-. Mouse potato, wavic/e 
+- Definition 
+    - _zythum_
+- Specialization (zythum again) 
+- Copying with substitution 
+    - _Road rage, air rage, boat rage, computer rage, parking rage, shoppyng rage_
+- Generalization 
+    - _pull a Homer_
+- Combination 
+    - _Mouse potato, wavicle_
 
 ----------
 
@@ -1419,605 +1299,422 @@ Combination
 
 ### <a id="#6A1"></a>Overview
 
+- Frames replace search with association 
+    - This move mitigates the frame problem 
+    - But, is a concept-based account **flexible** enough to model intelligent behaviour? 
+- Analogy applies old concepts to novel situations 
+    - E.g., advising the 80 year-old groom 
+- Examine and evaluate theories of analogy 
+    - Esp. the _multiconstraint_ theory (Holyoak & Thagard) 
 
 ### <a id="#6A2"></a>Analogy as Induction Generalization
 
+- Aristotle: analogies are 4-part proportions 
+    - A:B :: C:D
+    - E.g., 2:4 :: 6:12
+    - E.g., wine-cup:Dionysus :: spear:Ares 
+- Consider the warfare analogy: 
+    - Thebans:Phocians :: Athenians:Thebans 
+- Works via inductive generalization: 
+    - lhs --> general rule --> rhs 
+    - The generalization occurs in the first step 
+- Generalization 
+    - The first step infers a rule from a single instance: 
+        - It was wrong for the Thebans to attack the Phocians 
+        - It is wrong for a state to attack its neighbour 
+    - This process is an example of **jumping to conclusions**
+    - How to complete the following proportions? 
+        - abc:abd :: xyz:?? 
+        - abc:abd :: kji:?? 
+- The given information does little to constrain the rule in each case 
 
 ### <a id="#6A3"></a>Analogy as Extrapolation
 
+- Extrapolation: continue a trend into an area of sparse data 
+- Analogy as extrapolation (Mill 1872): 
+    - Items _X_ and _Y_ have features _p_, _q_, and _r_ 
+    - Item _X_ has feature _s_ 
+    - -->
+    - Probably, item _Y_ has feature _s_ 
+- Robert Plot (ca. 1600) on arrowheads 
+    - British artifacts and Indian artifacts are triangular, sharpened, and worn. 
+    - Indian artifacts are used for war and hunting.
+    - -->
+    - Probably, British artifacts were used for war and hunting. 
+- Extrapolation 
+    - The arrowheads analogy seems strong 
+- Consider the Earth and Moon 
+    - There are many similarities 
+    - The Earth is inhabited 
+    - -->
+    - Probably, the moon is inhabited 
+- Is this argument strong? 
+- The extrapolation seems indifferent to relevance 
 
 ### <a id="#6A4"></a>The Multiconstraint Theory
 
-
 #### <a id="#6A4a"></a>Representation
 
+- The _Multiconstraint theory_
+    - Rule-based accounts emphasize the weaknesses Of analogy 
+    - Associative accounts identify its strengths 
+        - E.g the Multiconstraint theory (MT) of Holyoak and Thagard (legs) 
+    - Analogy: an alignment of structured sets of concepts 
+- Analogical mappings
+    - The Ford Excursion, per Dan Becker: 
+        - "It's basically a garbage truck that dumps into the sky." 
+
+![analogical](imgs/6A4c_analogical.png)
 
 #### <a id="#6A4b"></a>Constraints on Coherence
 
+- Analogical coherence 
+    - The goodness of an analogy is its **coherence**: 
+        1. **Structural consistency**: the analogy should exhibit a one-to-one correspondence (**systematicity** in Gentner). 
+        2. **Similarity**: corresponding items should be similar. 
+        3. **Pragmatic utility**: the analogy addresses the problem at hand. 
+    - Coherence is a matter of degree 
+    - There are severa possible system relations, e.g., etc. 
 
 ## <a id="#6B"></a>Evaluation of Analogy
 
-
 ### <a id="#6B1"></a>Overview
 
+- Analogy is important to a concept-based account of cognition 
+- Examine the power of analogical thinking 
+    - As per the MT of analogy 
+- Explore its possibilities and limitations 
 
 ### <a id="#6B2"></a>Representational Power
 
-
 #### <a id="#6B2a"></a>Verbal
 
+- Some analogies are essentially verbal, e.g., 
+> The English Department will not accept that a fine novelist like Stone has anything to contribute to my literary education. Having Stone teach literature is, in their eyes, like having a gorilla teach zoology.
+
+![verbal](imgs/6B2a_verbal.png)
+
+- Analogical locutions include: 
+    - "be like", properly conjugated (as above), 
+    - "likewise", "similarly", or 
+    - "_x_ is the equivalent of _y_", "_x_ is the _y_ of _z_" 
+
+- For example: 
+> Writing about mUSic is like dancing about 
+architecture—it's a really stupid thing to want 
+to do." (Elvis Costello) 
 
 #### <a id="#6B2b"></a>Visual
 
+- Some visual analogies concern static spatial relationships 
+    - E.g., inside-of(A,B), left(C,D)
+- Visual analogies can a so involve dynamic (changing) relationships 
+    - E.g., Duncker's (1926) tumor/fortress problem 
 
 #### <a id="#6B2c"></a>Emotional
 
+- Analogies can **capture** an emotional experience 
+    - E.g., someone "letting off steam" 
+- Analogies can **induce** an emotional experience 
+    - E.g. David Wolf being left at Mir 
 
 ### <a id="#6B3"></a>Computational Power
 
+- Analogies are typically specific 
+    - They link two specific situations 
+- If analogies are information-poor, then can they be reliable? 
+    - Mil: "no" 
+    - MT: "somewhat" 
+- Analogy evaluation involves more than just similarity 
 
 #### <a id="#6B3a"></a>Analogy Construction
 
+- Often begins With an impasse (missing information) 
+- Possibe so utions include 
+    - Being given a source analog, or 
+    - Locating and retrieving one trom memory 
+- **Retrieval** is affected by similarity 
+    - E.g., Copernicus's Earth/ship analogy 
+On the MT, resemblance does not much affect analogy evaluation 
+When aligning ana ogs, structural consistency (systematicity) is paramount 
+    - Often involves **copy with substitution** 
+    - Results in a **candidate inference** 
+The candidate inference may require **adaptation** 
+    - E.g., CHEF'S Stir-fry recipes 
 
 #### <a id="#6B3b"></a>Explanation
 
+- Analogies may be used to explain, e.g., 
+    - Copernicus's Earth/ship analogy 
+    - Darwin's analogy between human and animal population growth 
+- Consider the "other-minds problem 
+    - How do you know that other people have minds like yours? 
+    - Abduction: 
+        - _X_ has a mind --> _X_ behaves intelligently 
+        - You intelligently 
+        - -->
+        - you probably have a mind 
+    - An analogical abduction: My mind causes my behaviour. You behave similarly, so you have a simllar mind that causes your behaviour 
+- Do you explain other people's behaviour analogically? When is this practice convincing? 
 
 #### <a id="#6B3c"></a>Learning
 
+- People may learn analogically 
+    - E.g., writing an essay Napoleon might like writing an essay on Julius Caesar 
+- The re-application of analogies may lead to **schema** induction 
+    - E.g., the problem with a fire-fighter analog added
 
 #### <a id="#6B3d"></a>Metaphor
 
+- Some metaphors are based on analogies (Aristotle):
+    - E.g., "my job is a jail" 
+- In what way is a job a jail? 
+- Not all metaphors are analogical 
+    - E.g., "Ottawa says ..." 
+- Analogy processing is voluntary; metaphor processing seems obligatory 
+    - E.g., "some desks are junkyards" vs. "some desks are roads" 
 
 ### <a id="#6B5"></a>Limits of Analogical Reasoning
 
+- False analogy: A comparison that misrepresents a situation 
+    - E.g. Quebec has the right to secede from Canada, just as Palestine has the right to break away from Israel. 
 
-Overview 
-Frames replace search with association 
-• This move mitigates the frame problem 
-• But, is a concept-based account flexible enough to 
-model intelligent behaviour? 
-Analogy applies old concepts to novel situations 
-. E.g., advising the 80 year-old groom 
-Examine and evaluate theories of analogy 
-• Esp. the multiconstraint theory (Holyoak & Thagard) 
-Analogy as inductive 
-generalization 
-Aristotle: analogies are 4-part proportions 
-• E.g., 6:12 
-• E.g., wine-cup:Dionysus spear:Ares 
-Consider the warfare analogy: 
-• Thebans:Phocians :: Athenians:Thebans 
-Works via inductive generalization: 
-lhs general rule —9 rhs 
-. The generalization occurs in the first step 
-Generalization 
-The first step infers a rule from a single instance: 
-It was wrong for the Thebans to attack the Phocians 
-It is wrong for a state to attack its neighbour 
-Th's process is an example of jumping to 
-conclusions 
-How to complete the following proportions? 
-• abc..abd xyz?? 
-. abc-abd kji:?? 
-The given information does little to constrain the 
-rule in each case 
-Analogy as extrapolation 
-Extrapolation: continue a trend into an area of sparse 
-data 
-Analogy as extrapolation (Mill 1872): 
-Items X and Y have features p, q, and r 
-Item X has feature s 
-Probably, item Y has feature s 
-Robert Plot (ca. 1600) on arrowheads 
-BritÉh artifacts and Indian artifacts are triangular, 
-sharpened, and worn. 
-Indian artifacts are used for war aM huntinq. 
-Probamy. British antacts were used for war 
-and hunting. 
-Extrapolation 
-The arrowheads ana ogy seems 
-strong 
-Consider the Earth and Moon 
-There are many similarities 
-The Earth is inhabited 
-Probably, the moon is inhabited 
-Is this argument strong? 
-The extrapolation seems indifferent 
-to relevance 
-The Multiconstraint theory 
-Rule-based accounts 
-emphasize the weaknesses Of 
-analogy 
-Associative accounts identify its 
-strengths 
-E.g the Multiconstraint theory 
-(MT) of Holyoak and Thagard 
-(legs) 
-Analogy: an a ignment Of 
-structured sets of concepts 
-Analogical mappings 
-The Ford Excursion, per Dan Becker: 
-"It's basically a garbage truck that dumps into the sky." 
-Arribu'e 
-G truck 
-gartuge 
-g mund 
-ground) 
-el du 'rate I 
-tecausefpal.lute.lvnetratej 
-Ford 
-Ford H 
-exhau st 
-st, sky) 
-, Irrmate) 
-poll 
-Analogical coherence 
-The goodness of an analogy is its coherence: 
-Structural consistency: the analogy should exhibit 
-a one-to-one correspondence (systematicity in 
-Gentner). 
-Similarity. corresponding items should be similar. 
-pragmatic utility the analogy addresses the 
-problem at hand. 
-Coherence is a matter of degree 
-There are severa possible system relations, 
-e.g., etc. 
-Overview 
-Analogy is important to a concept-based 
-account of cognition 
-Examine the power of analogical thinking 
-• As per the MT of analogy 
-Explore its possibilities and limitations 
-Verbal representation 
-Some analogies are essentially verbal, e.g., 
-'The English Department will not accept that a fine 
-novelist like Stone has anything to contribute to my 
-literary education. Having Stone teach literature is, in 
-their eyes, like having a gorilla teach zoology." 
-Zoology 
-zoologist 
-gorilla-behavior 
-gorilla 
-observe (zoologist,gorilla-behavior) 
-rstand(zoologist, v ior) 
-cannot-teach(gorilla.zoologist) 
-so-tha t(obv , understand) 
-Literary criticism 
-critic 
-Stom-novels 
-Stone 
-obse Is) 
-cannot-teach(Stone.critic) 
-,criticizc) 
-because (not. consult, canno t-teach) 
-Verbal representation2 
-Analogical locutions include: 
-• 'be like", properly conjugated (as above), 
-"likewise", "simi arly", or 
-"x is the equivalent of y", "x is the y of z" 
-For example: 
-• 'Writing about mUSic is like dancing about 
-architecture—it's a really stupid thing to want 
-to do." (Elvis Costello) 
-Visual analogies 
-Some visual analogies concern static spatial 
-relat'onships 
-• E.g., 
-Visual analogies2 
-Visua analogies can a so involve dynamic 
-(changing) relationships 
-. E.g., Duncker's (1926) tumorifortress problem 
-Emotional analogies 
-Analogies can capture an emot.onal experience 
-E.g., someone "letting Off steam" 
-Analogies can induce an emotional experience 
-. E.g. David Wolf being eftat Mir 
-Computational power 
-Analogies are typically specific 
-They link two specific situations 
-If analogies are information-poor, then can 
-they be reliable? 
-Mil : "no" 
-• MT: "somewhat" 
-Analogy evaluation involves more than just 
-similarity 
-Analogy construction 
-Often begins With an impasse (missing information) 
-possibe so utions inc ude 
-Being given a source analog, or 
-Locating and retrieving one trom memory 
-Retrieval is affected by similarity 
-• E.g., Copernicus's EartNshipanaIogy 
-Construction (cont.) 
-On the MT, resemblance does not much affect 
-ana ogy evaluation 
-When aligning ana ogs, structural consistency 
-(systematicity) is paramount 
-. Often involves copy with substitution 
-. Results 'n a candidate inference 
-The candidate inference may require 
-adaptation 
-• E.g., CHEF'S Stir-fry recipes 
-Explanation 
-Analogies may be used to explain, e.g., 
-. Copernicus's Earth/ship analogy 
-. Darwin's analogy between human and animal 
-popu ation growth 
-Explanation2 
-Consider the "other-minds problem 
-. HOW do you know that Other people have minds like 
-yours? 
-. Abduction: 
-X has a mind X Eehaves intelligently 
-You intelligently 
-you probably have a mind 
-• An analogical abduction: My mind causes my 
-behaviour. You behave similarly, so you have a 
-simllar mind that causes your behaviour 
-Do you explain other people's behaviour 
-ana og'ca ly? When is this practice convincing? 
-Learning 
-People may learn analogically 
-E.g., writing an essay Napoleon might like writing an 
-essay on Julius Caesar 
-The re-applicat'on of analog'es may lead to schema 
-'nduction 
-E ,g., the problem With a fire-fighter 
-Metaphor 
-Some metaphors are based on analogies 
-(Aristotle) : 
-. E.g., "my job is a jail" 
-In what way is a job a jail? 
-Not all metaphors are analogical 
-E.g., "Ottawa says 
-Analogy processing is voluntary; metaphor 
-processing seems obligatory 
-E.g., "some desks are junkyards" vs. 
-"some desks are roads" 
-Limits: false analogies 
-False analogy: A comparison that misrepresents 
-a situation 
-. E.g. Quebec has the right to secede from Canada, 
-just as Palestine has the right to break away from 
-Israel. 
-Pale 
-Palestirv 
-Isr;el 
-self-&terrnination) 
-x If-deternirxation) 
-rwy - , a) 
-Limits: counteranalogies 
-Counteranalogy: a comparison that 
-contradicts another comparison 
-E.g., miracles and theology (ca. 1700): 
-• God is like a perfect watchmaker (Leibniz) 
-• God is like a model king (Clarke) 
+![falseanology](imgs/6B5_falseanology.png)
+
+- Limits: counteranalogies
+
+- Limits: counteranalogies Counteranalogy: a comparison that contradicts another comparison
+    - E.g., miracles and theology (ca. 1700):
+    - God is like a perfect watchmaker (Leibniz)
+    - God is like a model king (Clarke)
 
 ----------
 
 # <a id="#7"></a>Lecture 7. Images
 
-
 ## <a id="#7A"></a>Images
-
 
 ### <a id="#7A1"></a>Overview
 
+- Much classic CogSci concerns symbols 
+- Another possible mental representation would be **images** 
+    - A representation that preserves qualities of perception, e.g., seeing an apple 
+- Images correspond to perceptual modalities 
+- Difficult questions: 
+    1. What kind of thing is a mental image? 
+    2. Do mental images really participate in cognition? 
+- Examine the **imagery debate** 
 
 ### <a id="#7A2"></a>The Imagery Debate
 
+- The experience of the "mind's eye" is commonplace 
+    - People can answer questions using visual mental imagery 
+    - E.g., what did you have for breakfast? (Galton, 1822-1911) 
+- Aristotle introduced the concept of the faculty of imagination 
+    - claimed that all thought involves images 
+- Criticisms of the importance of imagery: 
+    - Descartes (1569—1650): imagine a chiliagon! 
+    - Berkeley (1683—1753): an image Of a triangle is always of a part'cular kind, e.g., 'sosceles 
+- These points ead to skeptic'sm about images as concepts 
+- Supporters and skeptics 
+    - A pictorialist account of visual mental imagery emerged in the 1960s (Kosslyn) 
+        1. Visual mental images the things they represent, and
+        2. Visual mental images can play a substantial role in intelligent thinking. 
+    - A **descriptionist** account is supported by critics (Pylyshyn) 
+        1. Visual mental images are really descriptions, propositions, that contain symbolic information about the things they represent, and 
+        2. The phenomenon that we experience as visual mental imagery, i.e., the mind's eye, plays no role substantial role in cognition.
 
 ### <a id="#7A3"></a>Quasi-Pictorialism
 
+- How does an image resemble what it represents? 
+    - "tiger" does not resemble a tiger 
+        1. Every part of the image **corresponds** to a part of what the image represents, and 
+        2. **Proximity and adjacency relations** among parts of an image correspond to the relations among the parts of what the image represents. 
 
 ### <a id="#7A4"></a>Experimental Evidence for Quasi-Pictorialism
 
+- Mental images are ana ogous to graphical files on a computer 
+    - JPEG --> bitmap in a display buffer 
+    - LTM --> STM in a **visual buffer** (but no dsplay!) 
 
 #### <a id="#7A4a"></a>Mental Rotation
 
+- Shepard & Metzler (1971) asked subjects if pairs of figures were both the same object 
+- Result: a linear relationship between rotation angle and decision time 
 
 #### <a id="#7A4b"></a>Scanning
 
+Kosslyn, Ball & Reiser (1978) asked subjects to memorize a map and answer questions about locations on it 
+    - Control: consider whole map first 
+    - Experimental: focus on one location first 
+- Result: response time in experimental group was a linear function Of the distance between locations 
 
 #### <a id="#7A4c"></a>Zooming and Inspection
 
+- Kosslyn (1975) asked subjects to imagine either 
+    1. a rabbit next to an elephant, or 
+    2. a rabbit next to a mouse. 
+- Result: When asked if the rabbit had red eyes, subjects were quicker with the larger rabbit (2) 
 
 #### <a id="#7A4d"></a>Demand Characteristics?
 
+- In these experiments, subjects are instructed to think visually 
+    - Perhaps the regults are due to the subjects trying to please the experimenters (demand characteristic)
+- Finke and Pinker (1982) asked subjects to say whether an arrow points to a dot 
+- Result: response time was a linear function Of the distance between arrow and dot (when they aligned) 
+    - Also, more errors occurred when arrow and dot were close together 
 
 ### <a id="#7A5"></a>Neurological Evidence for Quasi-Pictorialism
 
-
 #### <a id="#7A5a"></a>In Search of the Visual Buffer
 
+- Some fMRI studies suggest V1 is connected With visual mental imagery (e.g., Kosslyn et al. 995) 
+- Toote et al. (lg82) suggest that monkey V1 is **retinotopically mapped** 
+- perhaps V1 is (part of) the visual buffer 
+- However, many fMRI studies do not corroborate this account 
+    - E.g. , V1 was not active while subjects located a dot within an imagined figure (Knauff et al. 2000)
 
 #### <a id="#7A5b"></a>Interference
 
+- Perhaps vision and visual mental imagery can interfere (compete for the same resource) 
+    - E.g., daydreaming might prevent visual memory 
+- If so, then imagery and perception share the visual buffer 
+- Segal and Fusella (1970) showed that imagery could interfere with same-modality perception 
+- Pylyshyn argues that both tasks demand application of similar concepts, eading to confusion 
 
 ## <a id="#7B"></a>Evaluation of Images
 
-
 ### <a id="#7B1"></a>Overview
 
+- Main issues in the imagery debate: 
+    1. What kind of thing is a mental image? 
+    2. Do mental images really participate in _cognition_?
+- Pictorialist versus descriptionist answers 
+- Philosophical question: Is imagery too tied to perception to represent general knowledge? 
+    - E.g., "triangularity" 
+- Review the case for descriptionism 
+- Examine **array theory** of imagery 
 
 ### <a id="#7B2"></a>Descriptionism
 
-
 #### <a id="#7B2a"></a>Infinite Regress
 
+- Defenses of descriptionism are often attacks on pictorialism (e.g., Dennett) 
+- **Infinite regress**
+    - For an image to be a representation, it must be perceived 
+    - This requirement leads to an infinite regress of perceivers 
+    - Pictorialism is a conceptual muddle 
+- This argument conflates two issues: 
+    1. A representation is something manipulated by procedures 
+        - Images and symbols are in the same position here 
+    2. Intentionality: the aboutness of representations 
+        - This problem applies to any representation 
+        - There is nothing muddled about preserving perceptual information instead of eliminating it 
 
 #### <a id="#7B2b"></a>Hedging
 
+- Pictorialists hedge the concept of _image_ until it means nothing 
+    - What is a _quasi_-image but a weasel word?
+    - Perhaps pictorialism is unscientific 
+- Why would _image_ be a complex concept? 
+    1. The phenomenon is complex 
+    2. Available methods Of inquiry are not adequate 
 
 #### <a id="#7B2c"></a>Absent Features
 
+- Imagery often omits details 
+    - An a tiger versus a picture 
+    - A description might just gay "numerous"
+- An image is just a description 
+- Reply: 
+    - A sketch is pictoria whilo omitting details 
+    - may be represented separately, e.g., shape and texture 
+- Counterargument: Unlike descriptions, images have **obligatory features**, e.g., posture 
+- What are some obligatory features of images? 
 
 #### <a id="#7B2d"></a>Imagery in Interpreted
 
+- people have trouble reinterpreting ambiguous figures, e.g. Wittgenstein's duck/rabbit 
+- Memorization and mental rotation of figures (Slezak 1995). 
+- Descriptionist view: images are just _symbolic interpretations_ of perceptions 
+- Pictorialist reply: 
+    - people can sometimes perform this such tasks
+    - Kossvn (1994): image parts fade quickly from the visual buffer unless we attend to them
+    - Tsal and Kolbet (1985): interpretation tends to attention to central features 
+    - Chambers: When we generate a mental image, we attend to central features and others fade, preventing reinterpretation 
+- Which features are central to the duck or rabbit interpretation of Wittgenstein's figure? 
 
 #### <a id="#7B2e"></a>Computational Equivalence
 
+- Anderson (1978) shows that pictorialism is behaviourally equivalent to descriptionism 
+- Can evidence ever be conclusive in the debate? 
+    1. Perhaps pictorialism is simpler 
+    2. Pictorialism also involves claims about the brain, e.g., the visual buffer 
 
 ### <a id="#7B3"></a>Representational Power
 
+- Array theory (Glasgow and Papadias 1992): 
+    - Deep, spatial, and visual representations 
 
 #### <a id="#7B3a"></a>Deep
 
+- Deep representation: a frame, e.g., 
+    - Frame: Map-of-Europe 
+        1. a-kind-of: map-of-continent 
+        2. parts: Sweden (0,4), Britain (1,0), ... 
+        3. procedures: find-population, ...
 
 #### <a id="#7B3b"></a>Spatial
 
+- An array capturing adjacency relationships 
+- Permits visual solutions to problems 
+    - E.g., is Sweden north Of Germany? 
+
+![spatial](imgs/7B3b_spatial.png)
+
+- Contrast with a rule-based model: 
+    - IF north-of(_x_, _y_) and north-of(_y_, _z_) THEN north-of(_x_, _y_)
+    - north-of(Britain, Portugal)
+    - north-of(Denmark, Germany)
+    - north-of(Sweden, Denmark)
+    - ...
+- Arrays can also be 3D 
+    - E.g., represent the physical structure of chemicals
+- Possible alternative: graphs 
 
 #### <a id="#7B3c"></a>Visual
 
+- An _occupancy array_ approximates the shape of an object 
+    - Perspective dependent 
+    - Supports procedures likes zoom, rotate, translate
+- Neurological evidence? 
+    - Spatial arrays imitate the "what" system 
+    - Visual arrays imitate the "where" system 
 
 #### <a id="#7B3d"></a>Limitations
 
+- Visual mental imagery lacks generality 
+    1. Portugal is other north or south of France. 
+    2. There is no duck on the table. 
+- Imagery cannot unambiguously represent these situations 
+
+![table](imgs/7B3d_limitation.png)
 
 ### <a id="#7B4"></a>Computational Power
 
 
 #### <a id="#7B4a"></a>Scientific Discovery
 
+- Scientific discovery, e.g. 
+    - Continenta drift (Wegener 1920) 
+    - Special relativity (Einstein 1905) 
 
 #### <a id="#7B4b"></a>Technical Innovation
 
+- Technological innovation, e.g. 
+    - Nikola Tesla (1856-1943) 
+    - Temple Grandin 
 
 #### <a id="#7B4c"></a>Analogy
-
-
-Machine generated alternative text:
-Overview 
-Much classic CogSci concerns symbols 
-Another possible mental representation 
-would be images 
-A representation that preserves qualities 
-of perception, e.g., seeing an apple 
-Images correspond to perceptual modalities 
-Difficult questions: 
-What kind of thing is a mental image? 
-Do mental images really participate in cognition? 
-Examine the imagery debate 
-The imagery debate 
-The experience of the "mind's eye" is 
-commonplace 
-People can answer questions using 
-visual mental imagery 
-• E.g., what did you have for breakfast? 
-(Galton, 1822-1911) 
-Aristotle introduced the concept of the faculty of 
-imagination 
-• claimed that all thought involves images 
-The imagery debate2 
-Cr'ticisms of the importance of imagery: 
-Descartes (1569—1650): imagine a chiliagon! 
-Berkeley (1683—1753): an image Of a triangle is 
-a ways of a part'cular kind, e.g., 'sosceles 
-These points ead to skeptic'sm about images 
-as concepts 
-Supporters and skeptics 
-A pictorialist account of visual mental imagery 
-emerged in the 1960s (Kosslyn) 
-Visual mental images the things they 
-Visual mental images can play a 
-role in intelligent thinking. 
-A descriptionist account is supported by critics 
-(pylyshyn) 
-Visual mental images are really descriptions, 
-pro-pogitiong, that contain information 
-about the things they represent, and 
-The phenomenon that we experience as visual 
-mental imagery, i.e., the mind's eye, plays no role 
-substantial role in 
-Quasi-pictorialism 
-How does an image resemble what it 
-represents? 
-'t'ger" does not resemble a tiger 
-Every part of the image corresponds to a part of 
-what the image represents, and 
-Proximity and adjacency relations among parts of 
-an image correspond to the relations among the 
-parts of what the image represents. 
-Mental images are ana ogous to graphical files 
-on a computer 
-JPEG —+ bitmap in a display buffer 
-L TM —9 STM in a visual buffer (but no dsplay!) 
-Evidence: mental rotation 
-Shepard & Metz er (1971) asked subjects if pa.rs 
-of figures were both the same object 
-Result: a linear relationship between rotation 
-angle and decision time 
-Evidence: scanning 
-Kosslyn, Ball & Reiser (1978) asked 
-subjects to memorize a map and 
-answer questions about locations 
-on it 
-Control: consider whole map first 
-Experimental: focus on one location 
-first 
-Result: response time in 
-experimental group was a linear 
-function Of the distance between 
-locations 
-Evidence: zooming and 
-inspection 
-Kosslyn (1975) asked subjects to imagine 
-either 
-a rabbit next to an elephant, or 
-2 a rabbit next to a mouse. 
-Result: When asked if the rabbit had red 
-eyes, subjects were quicker with the 
-larger rabbit (2) 
-Demand characteristic? 
-In these experiments, subjects are instructed to think 
-Visually 
-• Per haps the regultg are due to the gu trying to please the 
-characteristic 
-F'nke and Pinker (1982) asked subjects to say whether an 
-arrow points to a dot 
-Result: response time was a linear function Of the distance 
-between arrow and dot (When they aligned) 
-• Also, more errors c:curred when arrow and dot were close 
-together 
-Neurological evidence: In 
-search of the visual buffer 
-Some fMRl studies suggest VI is 
-connected With visual mental imagery 
-(e.g., Kosslyn et al. 995) 
-Toote et al. (lg82) suggest that 
-monkey VI is retinotopically mapped 
-perhaps VI is (part Of) the Visual buffer 
-However, many fMRl studies do not 
-corroborate this account 
-• E .g , VI Was not active While 
-subjects located a dot within an imagined 
-figure (Knauff et al. 
-Interference 
-Perhaps v'sion and visual mental 'magery can 
-interfere (compete for the same resource) 
-E.g., daydreaming might prevent Visua memory 
-If so, then imagery and perception share the 
-visual buffer 
-Segal and Fusella (1970) showed that imagery 
-could interfere with same-modality perception 
-Pylyshyn argues that both tasks demand 
-application of similar concepts, eading to 
-confusion 
-Overview 
-Main issues in the imagery debate: 
-What kind of thing is a mental image? 
-Do mental images really participate in cognition? 
-Pictorialist versus descriptionist answers 
-Philosophical question: Is imagery too tied to 
-perception to represent general knowledge? 
-E.g., "triangularity" 
-Review the case for descriptionism 
-Examine array theory of imagery 
-Descriptionism 
-Defenses of descriptionism are often attacks 
-on pictorialism (e.g., Dennett) 
-Infinite regress 
-For an image to be a representation, it must be perceived 
-This requirement leads to an infinite regress of perceivers 
-• Pictorialism is a conceptual muddle 
-This argument conflates two issues: 
-A representation is something manipulated by procedures 
-Images and symbols are in the same position here 
-Intentionality: the aboutness of representations 
-This problem applies to any representation 
-There is nothing muddled about preserving perceptual information 
-instead of eliminating it 
-Hedging 
-Pictorialists hedge the concept of 
-image until it means nothing 
-What is a quasi-image but a weasel 
-Perhaps pictorialism is unscientific 
-Why wou d image be a comp ex 
-concept? 
-The phenomenon is complex 
-Available methods Of inquiry are not 
-adequate 
-Absent features 
-Imagery Often omits details 
-• An a tiger versus a picture 
-• A description might just gay 
-"numerous 
-An image is just a description 
-Reply: 
-• A sketch is pictoria whilo omitting details 
-• may be represented separately, e.g., shape and texture 
-Counterargument: Unlike descriptions, images have 
-obligatory features, e.g., posture 
-What are some obligatory features of images? 
-Imagery is interpreted 
-people have trouble reinterpreting ambiguous 
-figures, e.g. Wittgenstein's duck/rabbit 
-Memorization and mental rotation of figures 
-(Slezak 1995). 
-Descriptionist view: images are just symbolic 
-interpretations of perceptions 
-Imagery is interpreted2 
-Pictorialist reply: 
-can sometimes perform 
-tasks 
-• Kossvn (1994): image parts fade quickly 
-from the visual buffer unless we attend to 
-Teal and Kolbet (i SBS): interpretation 
-tends to attention to central features 
-Chambers: When We generalg a mental 
-image, we attend to central features and 
-Others fade, reinterpretation 
-Which features are central to the duck 
-or rabbit interpretation of 
-Wittgenstein's figure? 
-Computational equivalence 
-Anderson (1978) shows that pictorialism 
-is behav ourally equivalent to 
-descriptionism 
-Can evidence ever be conclusive in the 
-debate? 
-Perhaps pictor' alism is simpler 
-2. Pictoria 'sm also involves cla'ms about the 
-brain, e.g., the visual buffer 
-Representational power 
-Array theory (Glasgow and Papadias 1992): 
-Deep, spatia , and v'sual representat'ons 
-Deep representation: a frame, e.g., 
-Frame: Map-of-Europe 
-t. a-kind-ot map-of-continent 
-2. pans: Sweden (0.4), entain (1,0), . 
-3 . procedures: find , . 
-Spatial array 
-An array capturing adjacency re ationships 
-Permits visual solutions to problems 
-E.g., is Sweden north Of Germany? 
-Spatial array2 
-Contrast with a rule-based model: 
-IF and THEN 
-Germany) 
-north Sweden , Denm ark) 
-Arrays can also be 3D 
-represent the physical Structure Of chemic. 
-Possible alternative: graphs 
-Visual arrays 
-An occupancy array approximates the shape of an object 
-• dependent 
-Supports procedures likes zoom, rotate, tranglatg 
-Neurological evidence? 
-arrays imitate the -what. system 
-arrays imitate system 
-Representational limitations 
-Visual mental imagery lacks generality 
-Portugal 's Other north Or south Of France. 
-There 's no duck On the table. 
-Imagery cannot unambiguously represent 
-these situations 
-Computational power 
-Scientific dlscovery, e.g. 
-Continenta drift (Wegener 1920) 
-. Special relativity (Einstein 1905) 
-Computational power2 
-Technological innovation, e.g. 
-. Nikola Tesla (1856-1943) 
-Temp e Grandin 
 
 ----------
