@@ -422,14 +422,16 @@ Q: What activities require intelligence?
 ### <a id="#3A1"></a>Overview
 
 - **Logic**: the study of arguments 
-    - Assess their strength 
-    - Represent their content and form 
+    - Assess their **strength** - when should we be convinced by an argument and when should we not be convinced?
+    - Represent their **content** and **form** for assessment of the strength
 - Example: Does the Bear Patrol work? 
     - Homer: Not a bear in sight. The Bear Patrol must be working like a charm. 
     - Lisa: That's specious reasoning, Dad. 
     - Homer: Thank you, dear. 
     - Lisa: By your logic I could claim that this rock keeps tigers away. 
 - What problems are there with Homer's argument? 
+    - It is Homer's knowledge about bears, the **content** of the argument, that is the problem with his logic.
+    - Homer is relying on an undependable **form** of argument.
 - The strength of the argument rests on its form and the reasons given 
 - Introduction to modern symbolic logic
     - Propositional logic 
@@ -443,28 +445,28 @@ Q: What activities require intelligence?
     - Aristotle (385-322 BC) found that form affects argument assessment 
         - **formal** logic 
     - Homer's argument: 
-        - [There is a gear Patron]
-        - Not a bear in sight
-        - -->
-        - Therefore, the Boar Patrol keeps bears away
+        - [There is a gear Patron] (Premise)
+        - Not a bear in sight (Premise)
+        - --> (underline)
+        - Therefore, the Boar Patrol keeps bears away (conclusion)
     - Premises, underline, conclusion 
 - Argument validity 
-    - Syllogism: 2 premises 
+    - **Syllogism**: 2 premises (and 1 conclusion)
         - All geese are birds. 
         - All birds have Wings. 
         - -->
         - All geese have Wings. 
-    - This argument is **valid**. If the premises are true, then the conclusion is true also 
+    - This argument is **valid**. If the premises are true, then the conclusion is true, also the next example:
         - All lions are cats. 
         - All cats have fur. 
         - -->
         - All lions have fur.
-    - and:
+    - This is still valid because **if** the premises were true, **then** the conclusion would be true:
         - All lions are waffles
         - All waffles are birds. 
         - -->
         - All lions are birds. 
-    - Not all argument forms are valid: 
+    - Not all argument forms are valid, **only certain argument forms are inherently valid**; even if the premises are true, the conclusion could be false, i.e. this argument is not valid: 
         - There is a Bear Patrol 
         - Not a bear in sight 
         - -->
@@ -478,13 +480,13 @@ Q: What activities require intelligence?
 
 ### <a id="#3A3"></a>Propositional Logic
 
-- Problem: not a I valid arguments are syllogisms 
+- Problem (or limitation): not all valid arguments are syllogisms 
 - Boole (1815-1864): Treat logic like algebra 
     - If Socrates is a man, then he is mortal. 
     - Socrates is a man. 
     - -->
     - Socrates is mortal. 
-- Becomes 
+- Becomes:
     - S &sup; M [S = "Socrates is a man"]
     - S [M = "Socrates is mortal"]
     - -->
@@ -510,9 +512,13 @@ Q: What activities require intelligence?
     - If nominated I will not run, and if elected I will not serve. [(N &sup; ~R) &amp; (E &sup; ~S)]
 - Exercise: symbolize the following using the symbols given 
     1. A conjunction has two components while a negation has only one. [C, N] 
-    2. If we attempt this pay then we'l either win big or lose big. [A, W, L] 
+        - Answer: [C &amp; N]
+    2. If we attempt this pay then we'll either win big or lose big. [A, W, L] 
+        - Answer: [A &sup; ( W &or; L )]
     3. I will leave town unless you call me. [L, C] 
+        - Answer: [~C &sup; L]
     4. Skip class again and you won't pass the course. [S, P]
+        - Answer: [S &sup; ~P]
 
 #### <a id="#3A3b"></a>Propositional Arguments
 
@@ -531,7 +537,7 @@ Q: What activities require intelligence?
     - p
     - -->
     - q
-- Not every form of argument is valid, e.g., 
+- **Not every form of argument is valid**, e.g., 
     - If the gear Patrol works, then no bears are in Sight.
     - No bears in Sight. 
     - --> 
@@ -546,10 +552,12 @@ Q: What activities require intelligence?
     - q
     - -->
     - p
+- The fact that an argument is a fallacy does not imply that the conclusion is false
+    - It simply means that the form of the argument is not enough to guarantee the truth of the conclusion
 
 ### <a id="#3A4"></a>Predicate Logic
 
-- Many arguments valid in English are not valid in propositional logic, e.g., 
+- Problem (limitation): many arguments valid in English are not valid in propositional logic, e.g., 
     - A geese are birds. 
     - All birds have winqs. 
     - -->
@@ -560,7 +568,7 @@ Q: What activities require intelligence?
     - -->
     - G
 - Propositional logic does not symbolize content shared among statements 
-- Pred cate logic addresses this deficiency 
+- Predicate logic addresses this deficiency 
 
 #### <a id="#3A4a"></a>Predicate Symbolization
 
@@ -584,8 +592,11 @@ terms, e.g.,
 - Exercise 
     - Symbolize the following using the symbols given 
         - Some people can't be bought (P, B). 
+            - Answer: (&exist;x)(P<sub>x</sub> &amp; ~B<sub>x</sub>)
         - A penny saved is a penny earned (P, S, E) 
+            - Answer: (&any;x)[(P<sub>x</sub> &amp; S<sub>x</sub>) &sup; E<sub>x</sub>]
         - Every dog has day (D, D', H). 
+            - Answer: (&any;x)[(D<sub>x</sub> &sup; (&exist;y)(D'y &amp; H<sub>xy</sub>)]
 
 #### <a id="#3A4b"></a>Predicate Arguments
 
@@ -627,7 +638,7 @@ terms, e.g.,
         - pr("no snow in January") = 1 - pr("snow in January") = 1 - .99 = .01
         - pr("1 or 2 on a die roll") = pr("1 on a die roll") + pr("2 on a die roll") = 1/6 + 1/6 = 1/3
         - pr("snow in January and April") = pr("snow in January") &bull; pr("snow in April") = .99 &bull; .65 = .6435
-        - pr("someone is an artsie given that she's female") = ??
+        - pr("someone is an artsie given that she's female") = pr("artists is female") / pr("female")
 
 #### <a id="#3A5b"></a>Probabilistic Arguments
 
@@ -664,9 +675,9 @@ terms, e.g.,
 
 ### <a id="#3B1"></a>Overview
 
-- Formal logic provides for the symbolization  and evaluation of arguments 
+- Formal logic provides for the symbolization and evaluation of arguments 
 - Does logic capture **laws of thought**? 
-    - Aristotle and Boole agreed, Frege d'd not 
+    - Aristotle and Boole agreed, Frege did not 
 - Why did the pioneers of CogSci look to formal logic? 
     -  Powerful and rigourous 
     -  Amenable to computational modeling 
@@ -674,7 +685,7 @@ terms, e.g.,
 
 ### <a id="#3B2"></a>Representational Power
 
-- Propositional logic captures some valid arguments, e.g., (_modus ponens_) 
+- Propositional logic captures some valid arguments, e.g., (_modus ponens_)
     - If it rains, then the sidewalk gets Wet.
     - It is raining. 
     - -->
@@ -696,10 +707,10 @@ terms, e.g.,
         - **Requests**: "Would you pass the salt, please?" 
 - Texts 
     - Not all texts are arguments, e.g., 
-> I'm sorry but this reading initiative. I'm sorry, I've never been a fan of books. I don't trust them. They're all fact, no heart. I mean, they're elitist, telling us what is or isn't true, or what did or didn't happen. Who's Britannica to tell me the Panama Cana was built in 1914? If I want to say it was built in 1941, that's my right as an American! I'm with the prescient, let history decide what did or did not happen." 
+        - I'm sorry but this reading initiative. I'm sorry, I've never been a fan of books. I don't trust them. They're all fact, no heart. I mean, they're elitist, telling us what is or isn't true, or what did or didn't happen. Who's Britannica to tell me the Panama Cana was built in 1914? If I want to say it was built in 1941, that's my right as an American! I'm with the prescient, let history decide what did or did not happen." 
 - Representational limitations 
-    - Predicate logic is specialized where natural languages are generalized 
-    - Doesn't the generalized nature Of language reflect the generalized nature of thinking, and so mental representations? 
+    - Predicate logic is **specialized** where natural languages are **generalized** 
+    - Doesn't the generalized nature of language reflect the generalized nature of thinking, and so mental representations? 
     - Formal logic has been extended to address other kinds of sentences 
         - The extensions are complex and unwieldy in combination 
 
@@ -707,7 +718,7 @@ terms, e.g.,
 
 - Argument construction is a model of intelligent thinking 
 - E.g., when Homer said 
-> "Not a bear in sight. The Bear patrol must like a charm," 
+    - "Not a bear in sight. The Bear patrol must like a charm," 
 - was he thinking...?
     - There is a Bear patrol 
     - Not a bear in Sight 
@@ -741,30 +752,31 @@ terms, e.g.,
     - travel(I, Hwy-7) &amp; travel(I, Hwy-85) &amp; travel(I, Hwy-7)
 - The relevance of an inference s unconnected with its validity 
 - Deduction is **monotonic**
-- Planning must often be norrmonotonic 
+- Planning must often be non-monotonic 
     - E.g., a route s blocked 
         - monotonic
+            - ![monotonic](imgs/3b3a_monotonic.png)
         - non-monotonic 
+            - ![nonmonotonic](imgs/3b3a_nonmonotonic.png)
 
 #### <a id="#3B3b"></a>Decision
 
 - **Decision**: choosing among plans 
 - Deduction only determines _if_ plans exist 
-    - Preferences need to be added, e.g., travel(I, Hwy-7) --> reach(I, Hwy-85) &amp; preferto(I, Hwy-7, Hwy-401)
+    - Preferences need to be added, e.g., travel(I, Hwy-7) --> reach(I, Hwy-85) &amp; prefer-to(I, Hwy-7, Hwy-401)
 - Assumptions of this approach: 
     1. I can completely order my preferences, and 
     2. I can know all my preferences before I make my plans. 
 - Perhaps probabilities could address these assumptions 
-    - E.g., decide among English, German, Philosophy courses 
-is is English") 
+    - E.g., decide among English, German, Philosophy courses
     - pr("C is interesting" | "C is english")
-- This solut'on is computationally explosive 
+- This solution is computationally explosive 
     - pr(A|B) must be known for every A and B 
     - For n predicates, there 2<sup>n-1</sup> conditional probabilities 
 
 #### <a id="#3B3c"></a>Explanation
 
-- Why doesn't my favorite Website load? 
+- Why doesn't my favorite website load? 
     1. Your browser has a bug; 
     2. Your connection s not working properly; 
     3. Your server at your service provider is not working; 
